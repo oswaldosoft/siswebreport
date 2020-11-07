@@ -1,0 +1,248 @@
+/* You can add global styles to this file, and also import other style files */
+
+ @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap');
+
+ :root{
+  --color-main:#DBDBDB; 
+  --color-primary:#eb2f64;
+  --color-secondary:#fe8200;
+  --color-primary-light:#FF3366;
+  --color-primary-dark:#BA265D;
+  --color-grey-light-1:#faf9f9;
+  --color-grey-light-2:#f4f2f2;
+  --color-grey-light-3:#f0eeee;
+  --color-grey-light-4:#ccc;
+  --color-grey-dark-1:#333;
+  --color-grey-dark-2:#777;
+  --color-grey-dark-3:#999;
+  --shadow-dark:0 2rem 6rem rgba(0,0,0,0.3);
+  --shadow-light:0 2rem 5rem rgba(0,0,0,0.06);
+  --line:1px solid var(--color-grey-light-2);
+  --box-shadow: 0 2rem 6rem rgba(0,0,0,.3);
+  }
+
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none; 
+}
+
+body{
+  font-size: 62.5%;
+  font-weight: 700;
+  font-family: 'Titillium Web', sans-serif;
+  
+}
+
+
+@mixin flexbox {
+    display:-webkit-flex; 
+    display: -ms-flexbox; 
+    display: flex; 
+}
+
+.login-container{
+   @include flexbox;
+    flex-flow: row nowrap;
+    width: 100%;
+    height: 40rem;
+    justify-content: center;
+    align-items: center;
+    
+    .login{
+      @include flexbox;
+       flex-direction: column;
+       justify-content: center;
+       width: 30rem;
+       height: 150px;
+        
+       
+       &-header{
+        
+       }
+
+       &-body{
+       @include flexbox;
+        flex-direction: column;
+        align-items: center; 
+        width: 100%;
+       }
+
+       mat-form-field{
+        width: 100%;
+       
+       }
+
+      .btn-block{ 
+        width:100%; 
+        margin-top: .5rem; 
+        margin-bottom: .2rem; 
+      }
+
+    }
+
+}
+
+.pages-container{
+    width: 100%;
+    height: 100%;
+   // border:3px solid green;
+  
+    .pages-header{
+      @include flexbox;
+      flex-flow: row nowrap;
+      width: 100%;
+      height: 4rem;
+      justify-content: space-between;
+      align-items: center;
+      background-color:var(--color-secondary);
+      position: fixed;
+      top:0;
+      z-index: 50000;
+
+      &-left{
+        @include flexbox;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        margin-left:1.5rem;
+      
+        .logo{
+          width: 100%;
+          display: flex;
+          flex-flow: row nowrap;
+          border:1px solid red;
+          
+          
+          &-img{
+            display: flex;
+            width: 8.5rem;
+            height: 3.5rem;
+          }
+          
+        }
+      }
+
+      &-right{
+        display: flex;
+        flex-flow: row nowrap;
+        align-self: stretch;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: 1.5rem;
+        height: 100%;
+        width: 100%;
+
+        & > *{
+          padding: 0 .5rem;
+          cursor: pointer;
+          height: 100%;
+          display: flex;
+          align-items: center;
+        }
+        .avatar{
+          display: flex;
+        }
+
+      }
+    }
+   
+    .pages{
+        @include flexbox;
+        width: 100%;
+        height: 100%;
+        flex-flow: row nowrap;
+        position: relative;
+        
+
+        &-sidebar{
+          @include flexbox;
+          position: fixed;
+          width: 16rem;
+          height: 100%;
+          top:4rem;
+          bottom: 0;
+          z-index:2000;
+          left:0;
+          padding-top: 1rem; 
+          background-color: #C02425;
+          overflow-x: hidden;
+          overflow-y: scroll;
+
+          .menu{
+            width: 100%;
+            line-height: 2rem;
+            
+            &-items{
+
+              &-links{
+                list-style: none;
+     
+                .items{
+                  display: flex;
+                  width: 100%;
+                  color:var(--color-grey-light-4);
+                  font-weight: 400;
+                  font-size: .8rem;
+                  text-transform: uppercase;
+                  background: #e43a15; 
+                  background: -webkit-linear-gradient(to right, #e65245, #e43a15); 
+                  background: linear-gradient(to right, #e65245, #e43a15);
+                  opacity: 0.8;      
+                  padding-left: 1rem;
+                  height: 2rem;
+                }
+              }
+            }
+            .subitems{
+              width: 100%;
+             
+              &-link{
+                
+                .link{
+                    color:#fff;
+                    font-size: .9rem;
+                    display: block;    
+                    padding-left: 1.5rem;
+                    transition: all .2s;  
+                    opacity: 0.8;     
+                    &:hover{
+                      background: #ECE9E6; 
+                      color:var(--color-grey-dark-1);
+                      padding-left: 2rem;
+                      opacity: .8;     
+                      font-weight: 400;
+                    }
+                }
+
+              }
+
+            }
+          }
+        }
+
+        &-content{
+          @include flexbox;
+          flex-direction: column; 
+          width: 80%;
+          padding-top: 5rem;
+          
+          height: 100%;
+          position: relative;
+          left:20%;
+          z-index:2000;
+          overflow-y: visible;
+     
+        }
+
+    }
+
+}
+
+
+::-webkit-scrollbar-thumb {background-color: #f85032;}
+::-webkit-scrollbar { width: 0.3rem;}
+::-webkit-scrollbar-track {background-color: #b8b8ba;}
