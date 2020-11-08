@@ -10,7 +10,6 @@ const routes: Routes = [
   {path: 'login', component:LoginComponent},
   {path: 'register', component:RegisterComponent},
   {path: 'dashboard', loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule)},
-  //{path: 'account', loadChildren: () => import('./account/account.module').then(m => m.AccountModule)},
   { path: '**', component: NopagefoundComponent }
 ];
 

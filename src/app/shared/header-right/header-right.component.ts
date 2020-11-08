@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+//import {MatMenuModule} from '@angular/material/menu';
 
 @Component({
   selector: 'app-header-right',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header-right.component.scss']
 })
 export class HeaderRightComponent implements OnInit {
-
-  constructor() { }
+  public foto_avatar: string;
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+    this.foto_avatar = 'http://i.pravatar.cc/300'; 
+  }
+
+  salida():void{
+    this.router.navigate(['login']);
   }
 
 }

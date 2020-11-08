@@ -1,4 +1,33 @@
 <div class="opt-1">Opcion 1</div>
 <div class="opt-2">Opcion 2</div>
-<div class="avatar">Avatar</div>
+<div class="avatar">Avatar
  
+
+<mat-menu #menu="matMenu" id="matemenu">
+    <mat-card>
+      <mat-card-header><img src="{{foto_avatar}}" alt="Avatar" class="avatar2"></mat-card-header> 
+      <mat-card-title><span>Oswaldo Molina</span></mat-card-title>
+      <mat-card-subtitle><span>oswaldo_molina@hotmail.com</span></mat-card-subtitle>
+    </mat-card>
+    <mat-divider></mat-divider>
+    <button mat-menu-item routerLink="/admin"><mat-icon>home</mat-icon>
+      <span>Home</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon color="primary">edit</mat-icon>
+      <span>Profile</span>
+    </button>
+    <button mat-menu-item disabled>
+      <mat-icon color="primary">help</mat-icon>
+      <span>? Help</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon color="primary">notifications_off</mat-icon>
+      <span>Disable alerts</span>
+    </button>
+      <button mat-menu-item  (click)="salida()">
+          <mat-icon color="primary">logout</mat-icon>
+         Logout
+    </button>
+  </mat-menu>
+</div>
