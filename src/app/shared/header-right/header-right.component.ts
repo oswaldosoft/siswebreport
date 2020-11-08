@@ -18,5 +18,9 @@ export class HeaderRightComponent implements OnInit {
   salida():void{
     this.router.navigate(['login']);
   }
+  
+  perfil():void{
+    this.router.navigate(['/dashboard/usuario']);
+  }
 
 }
