@@ -1,0 +1,52 @@
+.breadcrumbs-container{
+    display: flex;
+    flex-wrap: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 3rem;
+    font-size: .8rem;
+    padding-left: 1rem;
+    font-weight: 400;
+    background-color: #eaeaea;
+    color:#000;
+    span{
+        padding-left: .5rem;
+        transition: all .2s;
+        i{
+            padding-right: .2rem;
+        }
+        &:hover{
+            cursor: pointer;
+            color:orange;
+            font-weight: 700;
+        }
+
+        a:link {
+            cursor: pointer;
+            color:orangered;
+            font-weight: 700;
+        }
+        
+        a:visited {
+            cursor: pointer;
+            color:#000;
+            font-weight: 700;
+
+        }
+
+        a:active {
+            cursor: pointer;
+            color:#000;
+            font-weight: 700;
+
+        }
+
+        a:hover {
+            cursor: pointer;
+            color:orange;
+            font-weight: 700;
+        }
+    }
+}
+

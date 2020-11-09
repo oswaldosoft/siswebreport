@@ -350,7 +350,7 @@ td, th {
 }
 
 tr:hover{
-  background-color:#fe8200;;
+  background-color:#fe8200;
   color:#fff;
   opacity: 0.8;
   
@@ -375,3 +375,11 @@ tr:hover{
 
 }
 /* fin valvular container*/
+
+/* inicio secciones */
+.secciones{
+  display: flex;
+  color:#000;
+  font-weight: bold;
+}
+/* fin secciones*/

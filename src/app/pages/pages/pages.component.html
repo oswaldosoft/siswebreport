@@ -1,64 +1,12 @@
 <div class="pages-container">
-    <!-- <div class="pages-header">
-        <div class="pages-header-left">
-            <div class="logo">LOGO</div>
-        </div>
-        <div class="pages-header-right">
-             <div class="opt-1">Opcion 1</div>
-             <div class="opt-2">Opcion 2</div>
-             <div class="avatar">Avatar</div>
-        </div> 
-        
-    </div> -->
     <app-header></app-header>
     <div class="pages">
         <div class="pages-sidebar" [ngClass]="{'show_menu':env.show_menu==true,'hidden_menu':env.show_menu==false}">
-            <div class="menu">
-                <ul class="menu-items">
-                    <li class="menu-items-links">
-                        <a href="#" class="items"><i class="fa fa-info" aria-hidden="true"></i>Dispositivos Alivio de presión</a>
-                        <ul class="subitems">
-                            <li class="subitems-link"><a [routerLink]="['/dashboard/dispositivos-alivios']"  class="link">Datos técnicos</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-items-links">
-                        <a href="#" class="items"><i class="fa fa-wrench" aria-hidden="true"></i>Tarado y mantenimiento</a>
-                        <ul class="subitems">
-                            <li class="subitems-link"><a [routerLink]="['/dashboard/alivio-seguridad']" class="link">Alivio y/o seguridad</a></li>
-                            <li class="subitems-link"><a [routerLink]="['/dashboard/alivio-termico']" class="link">Alivio térmico</a></li>
-                            <li class="subitems-link"><a [routerLink]="['/dashboard/piloto-operada']" class="link">Piloto operada</a></li>
-                            <li class="subitems-link"><a [routerLink]="['/dashboard/presion-vacio']" class="link">Presión / vacío</a></li>
-                            <li class="subitems-link"><a [routerLink]="['/dashboard/presion-reporte-vacio']" class="link">Presión resorte / vacío</a></li>
-                            <li class="subitems-link"><a [routerLink]="['/dashboard/emergencia']" class="link">Emergencia</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-items-links">
-                        <a href="#" class="items"><i class="fa fa-list" aria-hidden="true"></i>Válvulas</a>
-                        <ul class="subitems">
-                            <li class="subitems-link"><a [routerLink]="['/dashboard/seguridad-convencional']" class="link">Seguridad convencional</a></li>
-                            <li class="subitems-link"><a [routerLink]="['/dashboard/seguridad-balanceada']" class="link">Seguridad balanceada (Fuelle)</a></li>
-                            <li class="subitems-link"><a [routerLink]="['/dashboard/valvula-presion-vacio']" class="link">Presión y vacío</a></li>
-                            <li class="subitems-link"><a [routerLink]="['/dashboard/valvula-presion-vacio-muelle']" class="link">Presión (con muelle) / vacío</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-items-links">
-                        <a href="#" class="items"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Reportes</a>
-                        <ul class="subitems">
-                            <li class="subitems-link"><a [routerLink]="['/dashboard/reportes']" class="link">Generar reporte</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-items-links">
-                        <a href="#" class="items"><i class="fa fa-user" aria-hidden="true"></i>Perfil usuario</a>
-                        <ul class="subitems">
-                            <li class="subitems-link"><a [routerLink]="['/dashboard/usuario']" routerLinkActive="router-link-active" class="link">Datos usuario</a></li>
-                            <li class="subitems-link"><a [routerLink]="['/dashboard/usuario-clave']" class="link">Cambio contraseña</a></li>
-                        </ul>
-                    </li> 
-                </ul>
-            </div>
+            <app-sidebar></app-sidebar>
         </div>
         <div class="pages-content" [ngClass]="{'open_content':env.show_menu==true,'close_content':env.show_menu==false}">
-            
+            <app-breadcrumbs></app-breadcrumbs>
+
            <!--  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse in voluptate vitae cumque ex odio laudantium eius porro, maxime rem eos nobis aliquid minus iste aut? Ad possimus recusandae quam!</p>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse in voluptate vitae cumque ex odio laudantium eius porro, maxime rem eos nobis aliquid minus iste aut? Ad possimus recusandae quam!</p>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse in voluptate vitae cumque ex odio laudantium eius porro, maxime rem eos nobis aliquid minus iste aut? Ad possimus recusandae quam!</p>

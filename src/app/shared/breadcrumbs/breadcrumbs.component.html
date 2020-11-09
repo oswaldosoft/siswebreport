@@ -1,1 +1,5 @@
-<p>breadcrumbs works!</p>
+ <mat-toolbar class="breadcrumbs-container">
+    <span><a [routerLink]="['/dashboard']"><i class="fa fa-home" aria-hidden="true"></i>Dashboard</a></span>
+    <span>/</span>
+    <span><a>{{titulo}} </a></span>  
+</mat-toolbar>

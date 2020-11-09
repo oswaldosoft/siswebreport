@@ -6,13 +6,14 @@ import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { HeaderLeftComponent } from './header-left/header-left.component';
 import { HeaderRightComponent } from './header-right/header-right.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { RouterModule } from '@angular/router';
 
 
 
 @NgModule({
   declarations: [HeaderComponent, BreadcrumbsComponent, HeaderLeftComponent, HeaderRightComponent, SidebarComponent],
   imports: [
-    CommonModule,MaterialModule
+    CommonModule,MaterialModule,RouterModule
   ],exports:[
     HeaderComponent, BreadcrumbsComponent, HeaderLeftComponent, HeaderRightComponent, SidebarComponent
   ]

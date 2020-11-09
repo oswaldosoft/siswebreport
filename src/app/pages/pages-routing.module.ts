@@ -7,7 +7,7 @@ const routesint: Routes = [
  
   {path: '', component: PagesComponent,
   children: [
-    {path: 'dashboard', component: PagesComponent},
+    {path: 'dashboard', component: PagesComponent,data:{title:'Dashboard'}},
     { path: 'dispositivos-alivios', loadChildren: () => import('./dispositivos-alivios/dispositivos-alivios.module').then(m => m.DispositivosAliviosModule) },
     { path: 'alivio-seguridad', loadChildren: () => import('./alivio-seguridad/alivio-seguridad.module').then(m => m.AlivioSeguridadModule) },
     { path: 'alivio-termico', loadChildren: () => import('./alivio-termico/alivio-termico.module').then(m => m.AlivioTermicoModule) },

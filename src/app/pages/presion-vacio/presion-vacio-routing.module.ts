@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { PresionVacioComponent } from './presion-vacio.component';
 
-const routes: Routes = [{ path: '', component: PresionVacioComponent }];
+const routes: Routes = [{ path: '', component: PresionVacioComponent,data:{title:'Presión vacío'} }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

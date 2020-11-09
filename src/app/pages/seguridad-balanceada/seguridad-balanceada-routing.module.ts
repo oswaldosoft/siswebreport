@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { SeguridadBalanceadaComponent } from './seguridad-balanceada.component';
 
-const routes: Routes = [{ path: '', component: SeguridadBalanceadaComponent }];
+const routes: Routes = [{ path: '', component: SeguridadBalanceadaComponent,data:{title:'Seguridad Balanceada'} }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
