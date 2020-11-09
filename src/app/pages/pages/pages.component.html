@@ -27,8 +27,8 @@
                             <li class="subitems-link"><a [routerLink]="['/dashboard/alivio-seguridad']" class="link">Alivio y/o seguridad</a></li>
                             <li class="subitems-link"><a [routerLink]="['/dashboard/alivio-termico']" class="link">Alivio térmico</a></li>
                             <li class="subitems-link"><a [routerLink]="['/dashboard/piloto-operada']" class="link">Piloto operada</a></li>
-                            <li class="subitems-link"><a [routerLink]="['/dashboard/presion-vacio']" class="link">Presión / vacio</a></li>
-                            <li class="subitems-link"><a [routerLink]="['/dashboard/presion-reporte-vacio']" class="link">Presión resorte / vacio</a></li>
+                            <li class="subitems-link"><a [routerLink]="['/dashboard/presion-vacio']" class="link">Presión / vacío</a></li>
+                            <li class="subitems-link"><a [routerLink]="['/dashboard/presion-reporte-vacio']" class="link">Presión resorte / vacío</a></li>
                             <li class="subitems-link"><a [routerLink]="['/dashboard/emergencia']" class="link">Emergencia</a></li>
                         </ul>
                     </li>
@@ -37,8 +37,8 @@
                         <ul class="subitems">
                             <li class="subitems-link"><a [routerLink]="['/dashboard/seguridad-convencional']" class="link">Seguridad convencional</a></li>
                             <li class="subitems-link"><a [routerLink]="['/dashboard/seguridad-balanceada']" class="link">Seguridad balanceada (Fuelle)</a></li>
-                            <li class="subitems-link"><a [routerLink]="['/dashboard/valvula-presion-vacio']" class="link">Presión y vacio</a></li>
-                            <li class="subitems-link"><a [routerLink]="['/dashboard/valvula-presion-vacio-muelle']" class="link">Presión (con muelle) / vacio</a></li>
+                            <li class="subitems-link"><a [routerLink]="['/dashboard/valvula-presion-vacio']" class="link">Presión y vacío</a></li>
+                            <li class="subitems-link"><a [routerLink]="['/dashboard/valvula-presion-vacio-muelle']" class="link">Presión (con muelle) / vacío</a></li>
                         </ul>
                     </li>
                     <li class="menu-items-links">
@@ -57,8 +57,8 @@
                 </ul>
             </div>
         </div>
-        <div class="pages-content">
-            <p>pages works!</p>
+        <div class="pages-content" [ngClass]="{'open_content':env.show_menu==true,'close_content':env.show_menu==false}">
+            
            <!--  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse in voluptate vitae cumque ex odio laudantium eius porro, maxime rem eos nobis aliquid minus iste aut? Ad possimus recusandae quam!</p>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse in voluptate vitae cumque ex odio laudantium eius porro, maxime rem eos nobis aliquid minus iste aut? Ad possimus recusandae quam!</p>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse in voluptate vitae cumque ex odio laudantium eius porro, maxime rem eos nobis aliquid minus iste aut? Ad possimus recusandae quam!</p>
