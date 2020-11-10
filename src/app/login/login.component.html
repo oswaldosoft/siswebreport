@@ -1,54 +1,58 @@
-<div class="login-container">
-  <div class="login">
-    <div class="login-header">
+<div class="container">
+  <div class="row-content">
+    <div class="row1">
         <img [src]="urlImg">
+        <img src="../../assets/img/logoRepsol.png" class="logotipo-login">
     </div>
-    <div class="login-body">
+    <div class="row2">
     <mat-card>
-      <mat-toolbar>
+      <mat-toolbar color="primary">
          <mat-card-header>
-              <mat-card-title>Login</mat-card-title>
+              <mat-card-title>
+                <span>Control de Acceso</span>
+                </mat-card-title>
          </mat-card-header>
       </mat-toolbar>
       <mat-card-content>
         <form [formGroup]="loginForm" method="post" (ngSubmit)="login()" autocomplete="off">
+          
          <mat-form-field>
           <mat-label><span style="margin-right: 20px;">Email</span></mat-label>
             <input matInput type="email" formControlName="email" placeholder="Your email" id="email" autocomplete="off">
         </mat-form-field>
-       <!--  <div class="alert-danger" *ngIf="email.invalid && (email.dirty || email.touched)">
+        <div class="alert-danger" *ngIf="email.invalid && (email.dirty || email.touched)">
           <div class="container-error-message" *ngIf="email.errors.required">
-            Email is required
+            Email es requerido
           </div>
           <div class="container-error-message" *ngIf="email.errors.minlength">
-            Email must be at least 5 characters long.
+            El correo electrónico debe tener al menos 5 caracteres.
           </div>
           <div class="container-error-message"
             *ngIf="(email.dirty || email.touched) && email.invalid && email.errors.pattern">
-            Value has to be a valid email address.
+            El valor debe ser una dirección de correo electrónico válida
           </div>
-        </div> -->
+        </div>
         <mat-form-field>
           <mat-label>Password</mat-label>
           <input matInput type="password" formControlName="password" placeholder="Your Password" autocomplete="off">
         </mat-form-field>
-        <!-- <div class="alert-danger" *ngIf="password.invalid && (password.dirty || password.touched)">
+        <div class="alert-danger" *ngIf="password.invalid && (password.dirty || password.touched)">
           <div class="container-error-message" *ngIf="password.errors.required">
-            password is required
+            password es requerido
           </div>
           <div class="container-error-message" *ngIf="password.errors.minlength">
-            Name must be at least 5 characters long.
+            El password debe tener al menos 5 caracteres.
           </div>
         </div>
         <div class="alert-danger" *ngIf="errores">
           <div class="container-error-message" *ngIf="password.errors?.required">
             {{errores}}
           </div>
-        </div> -->
+        </div>
         <mat-spinner *ngIf="activoSpinner==true" [diameter]="30"></mat-spinner>
-          <button mat-raised-button type="submit" class="btn-block fondo_botton"   [disabled]="loginForm.invalid">Send</button>
-          <button mat-stroked-button  type="reset"  class="btn-block" color="primary" (click)="onResetForm()" >Reset</button>
-          <button mat-stroked-button  type="button" class="btn-block" color="primary" (click)="registrarse()">Register <i class="fa fa-user-plus" aria-hidden="true"></i>
+          <button mat-raised-button type="submit" class="btn-block fondo_botton"   [disabled]="loginForm.invalid">Enviar</button>
+          <button mat-stroked-button  type="reset"  class="btn-block" color="primary" (click)="onResetForm()" >Cancelar</button>
+          <button mat-stroked-button  type="button" class="btn-block" color="primary" (click)="registrarse()">Registrarse <i class="fa fa-user-plus" aria-hidden="true"></i>
           </button>
       </form>
       </mat-card-content>
@@ -56,4 +60,4 @@
   </div>
 
   </div>
-</div> 
+</div>

@@ -20,7 +20,9 @@ export class LoginComponent implements OnInit {
 
   constructor(private router: Router) {
     this.loginForm = this.createForm();
+    this.urlImg = "../assets/img/img_login_2.jpg";
     this.errores = '';
+    document.title = 'Control de acceso Siswebreport';
    }
 
   ngOnInit(): void {

@@ -43,46 +43,6 @@ body{
     display:flex; 
 }
 
-.login-container{
-   @include flexbox;
-    flex-flow: row nowrap;
-    width: 100%;
-    height: 40rem;
-    justify-content: center;
-    align-items: center;
-    
-    .login{
-      @include flexbox;
-       flex-direction: column;
-       justify-content: center;
-       width: 30rem;
-       height: 150px;
-        
-       &-header{
-        
-       }
-
-       &-body{
-       @include flexbox;
-        flex-direction: column;
-        align-items: center; 
-        width: 100%;
-       }
-
-       mat-form-field{
-        width: 100%;
-       
-       }
-
-      .btn-block{ 
-        width:100%; 
-        margin-top: .5rem; 
-        margin-bottom: .2rem; 
-      }
-
-    }
-
-}
 /* inicio pages container*/
 .pages-container{
     width: 100%;
@@ -196,7 +156,7 @@ body{
                   flex-wrap: row nowrap;
                   justify-content: flex-start;
                   align-items: center;
-                  width: 100%;
+                  width: 16rem;
                   color:var(--color-grey-light-4);
                   font-weight: 400;
                   font-size: .8rem;
@@ -212,14 +172,15 @@ body{
                     margin-right: .5rem;
                     color:#ECE9E6;
                   }
-                }
+                } 
+              
               }
             }
             .subitems{
               width: 100%;
              
               &-link{
-                
+                width: 100%;
                 .link{
                     color:#fff;
                     font-size: .9rem;
@@ -321,10 +282,6 @@ body{
 /* inicio pages container*/
 
 /* valvulas container*/
-*{
-  margin: 0;
-  padding:0;
-}
 
 table { 
   width: 100%; 
