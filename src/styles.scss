@@ -347,7 +347,22 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mat-ink-bar{ 
   background-color: #e43a15 !important;
 }
+.mat-tab-label{
+  font-size: .7rem;
+  font-weight: 700;
+  color:#e43a15 !important;
+}  
 
+.example-full-width {
+  width: 95.1%;
+  min-width: 95.1%;
+  max-width: 95.1%;
+  margin-bottom: 1.5rem;
+  .mat-input-element{
+    padding-bottom: 2rem;
+
+  }
+}
 
 
 

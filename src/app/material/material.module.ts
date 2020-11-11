@@ -17,6 +17,9 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatSelectModule} from '@angular/material/select';
+
 
 
 
@@ -39,7 +42,9 @@ import {MatMenuModule} from '@angular/material/menu';
     MatSortModule,
     MatProgressBarModule,
     MatTabsModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatRadioModule,
+    MatSelectModule
   ],
   exports:[
     MatToolbarModule,
@@ -57,7 +62,9 @@ import {MatMenuModule} from '@angular/material/menu';
     MatSortModule,
     MatProgressBarModule,
     MatTabsModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatRadioModule,
+    MatSelectModule
   ]
 })
 export class MaterialModule { }

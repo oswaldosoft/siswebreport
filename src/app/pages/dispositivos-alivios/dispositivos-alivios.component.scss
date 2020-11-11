@@ -1,13 +1,143 @@
+*{
+  margin:0;
+  padding: 0;
+}
 
+@mixin flexbox {
+  display:-webkit-flex; 
+  display: -ms-flexbox; 
+  display:flex; 
+}
+.datos-tenicos-container{
+  display: flex;
+  flex-wrap: row nowrap;
+  justify-content: center;
+  width: 95%;
+  border:1px solid #aeaeae;
+  align-items: center;
+  .botones{
+    text-align: center;
+    margin-top: 1rem;
+    padding: 1rem .3rem;
+    
+    button{
+      margin-right: 2rem;
+      width: 10rem;
+    }
+
+    .mat-tab-label-content{
+      color:red !important;
+    }
+  }
+  
+  mat-card{
+    width: 100%;
+    margin-top:1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .section-1 {
+    display:inline-block;
+    color:#aeaeae;
+    .mat-checkbox {
+        margin-right: 1rem;
+        margin-left: 2rem;
+    
+    }
+
+    mat-radio-button{
+      margin-right: 1rem;
+      margin-left: 2rem;
+
+    }
+
+    .example-full-width {
+      width: 100%;
+      min-width: 500px;
+      max-width: 500px;
+      .mat-input-element{
+        width: 500px !important;
+      }
+    }
+  
+    /* valvulas container*/
+
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+  font-size: .8rem;
+}
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+  background: #eee; 
+}
+th { 
+  background: #333; 
+  color: white; 
+  font-weight: 400;
+  width: 10rem; 
+  text-transform: uppercase;
+  
+}
+td, th { 
+  padding: 6px; 
+  border: 1px solid #ccc; 
+  text-align: left; 
+}
+
+tr:hover{
+ // background-color:#fe8200;
+  color:#fff;
+  opacity: 0.8;
+  
+}
+
+.insp-val-convencional-container{
+  @include flexbox;
+  flex-wrap: row wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-bottom: 5rem;
+
+  &-imagen{
+      @include flexbox;
+
+  }
+
+  &-tablero{
+      @include flexbox;
+
+  }
+
+}
+/* fin valvular container*/
+
+  }
+
+  .section-2 {
+    display:block;
+    color:#aeaeae;
+    height: 2rem;
+    margin-top:.5rem;
+    margin-bottom: .5rem;
+    .mat-checkbox {
+        margin-right: 1rem;
+        margin-left: 2rem;
+    
+    }
+
+  }
+
+}
 
 
 mat-tab-group{
     width: 95%;
   
-    .mat-tab-label{
+    /* .mat-tab-label{
       font-size: .8rem;
       color:red !important;
-    }  
+    }   */
 
     mat-form-field{
         margin-right: .7rem;
@@ -28,20 +158,21 @@ mat-tab-group{
         margin-right: .7rem;
         width: 50%;
     }
+
+    .mat-form-field-4{
+      margin-right: .7rem;
+      width: 47%;
+    }
+
+    .mat-form-field-5{
+      margin-right: .7rem;
+      width: 35%;
+    }
   
   }
 
 
-  .example-section {
-    display:inline-block;
-    color:#aeaeae;
-    .mat-checkbox {
-        margin-right: 1rem;
-        margin-left: 2rem;
-    
-    }
-
-  }
+  
 
 
   
