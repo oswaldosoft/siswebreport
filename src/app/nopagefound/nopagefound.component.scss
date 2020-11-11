@@ -1,0 +1,119 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+@mixin flexbox {
+    display:-webkit-flex; 
+    display: -ms-flexbox; 
+    display:flex;
+    
+}
+
+.container{
+    @include flexbox;
+    flex-wrap: column nowrap; 
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    height: 100%;
+   // background-image: url("../../assets/img/fondo.png");
+    background: linear-gradient(to right bottom, rgba(255,255,255,0), white 100%), url(../../assets/img/fondo.png);
+    background-size: cover;
+    transition: all .2s;
+
+    &:hover{
+        background-image: url("../../assets/img/fondo.png");
+        background-size: cover;
+    }
+    .row-content{
+        @include flexbox;
+        flex-flow: column nowrap; 
+        justify-content: space-around;
+        align-items: center;
+        width: 20rem !important;
+        height: 13.2rem !important;
+        
+        .row1{
+            width: 300px;
+            height: 100%;
+            box-shadow: 5px 5px 15px #999;
+            img{
+                display: inline;
+                width: 300px;
+                height: 14rem;
+                margin: 0;
+                padding-top: .1rem;
+            }
+        }
+        .row2{
+            box-shadow: 5px 5px 15px #999;
+            width: 300px;
+        }
+    }
+  
+  }
+  
+ 
+.mat-card{ 
+    width: 100%;  
+    height: 100%;  
+    margin-left: 0;  
+    margin: auto;  
+    align-items: flex-start;
+}
+
+.mat-toolbar{
+    align-content: center; 
+    justify-content: center !important; 
+    background: #fe8200;  
+    opacity: 0.8;
+}
+
+.fondo_botton{ background: #fe8200; background: -webkit-linear-gradient(to right, #fe8200, #fe8200);  background: linear-gradient(to right, #fe8200, #fe8200);color:white !important;}
+.btn-block{ width:100%; margin-top: 10px; margin-bottom: 5px; }
+  
+  
+button{ color:#fe8200 !important;}
+form{ padding:20px 20px; }
+  
+mat-form-field, input {  width: 100%; }
+  
+.logotipo-login{
+    width: 140px !important;
+    height: 50px !important; 
+    position: absolute; 
+    top:2%;
+    left:80%; 
+    z-index: 50000;
+}  
+  
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 700px) {
+    mat-card {  margin: auto;   width: 65%;   margin-top: 2rem;   padding:0px;  }
+    .logotipo-login{
+        display: none !important;
+    }
+  }
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    mat-card {  margin: auto;   width: 55%;   margin-top: 2rem;   padding:0px;  }
+  }
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    mat-card {  margin: auto;   width: 45%;   margin-top: 2rem;   padding:0px;  }
+  }
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    mat-card {  margin: auto;   width: 25%;   margin-top: 2rem;   padding:0px;  }
+  }
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    mat-card {  margin: auto;   width: 25%;   margin-top: 2rem;   padding:0px;  }
+  }
+  

@@ -1,0 +1,59 @@
+
+
+
+mat-tab-group{
+    width: 95%;
+  
+    .mat-tab-label{
+      font-size: .8rem;
+      color:red !important;
+    }  
+
+    mat-form-field{
+        margin-right: .7rem;
+        width: 31%;
+    }
+    
+    .mat-form-field-1{
+        margin-right: .7rem;
+        width: 23%;
+    }
+
+    .mat-form-field-2{
+        margin-right: .7rem;
+        width: 14%;
+    }
+
+    .mat-form-field-3{
+        margin-right: .7rem;
+        width: 50%;
+    }
+  
+  }
+
+
+  .example-section {
+    display:inline-block;
+    color:#aeaeae;
+    .mat-checkbox {
+        margin-right: 1rem;
+        margin-left: 2rem;
+    
+    }
+
+  }
+
+
+  
+::ng-deep .create-account-form {
+    .mat-focused .mat-form-field-ripple {
+      /*change color of underline when focused*/
+      background-color: #e43a15 !important;
+    }
+    .mat-focused .mat-form-field-label {
+      /*change color of label when focused*/
+      color: #e43a15 !important;
+     }
+  }
+
+  

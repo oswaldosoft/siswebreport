@@ -1,1 +1,144 @@
-<p>dispositivos-alivios works!</p>
+<mat-tab-group>
+    <mat-tab label="I. INFORMACIÓN GENERAL"> 
+        <mat-card>
+            <mat-card-content>
+              <form class="create-account-form"  autocomplete="off">
+               <mat-form-field>
+                <mat-label>TAG Seguridad</mat-label>
+                  <input matInput type="text"  placeholder="Indique información" id="tag_seguridad" autocomplete="off">
+               </mat-form-field>
+
+               <mat-form-field>
+                <mat-label>Servicio (Fluido)</mat-label>
+                  <input matInput type="text"  placeholder="Indique información" id="servicio_fluido" autocomplete="off">
+               </mat-form-field>
+
+               <mat-form-field>
+                <mat-label>Criticidad operativa</mat-label>
+                   <input matInput type="text"  placeholder="Indique información" id="critic_operativa" autocomplete="off">
+               </mat-form-field>
+
+               <mat-form-field>
+                <mat-label>Tipo seguridad</mat-label>
+                  <input matInput type="text"  placeholder="Indique información" id="tipo_seguridad" autocomplete="off">
+               </mat-form-field>
+
+               <mat-form-field>
+               <mat-label>Proteje a</mat-label>
+                  <input matInput type="text"  placeholder="Indique información" id="proteje_a" autocomplete="off">
+               </mat-form-field>
+
+               <mat-form-field>
+               <mat-label>Pos. retimbrado</mat-label>
+                   <input matInput type="text"  placeholder="Indique información" id="pos_retimbrado" autocomplete="off">
+                </mat-form-field>
+
+               <mat-form-field>
+               <mat-label>Fabricante</mat-label>
+                  <input matInput type="text"  placeholder="Indique información" id="fabricante" autocomplete="off">
+               </mat-form-field>
+
+               <mat-form-field>
+               <mat-label>Modelo</mat-label>
+                  <input matInput type="text"  placeholder="Indique información" id="modelo" autocomplete="off">
+               </mat-form-field>
+
+               <mat-form-field>
+               <mat-label>Serial</mat-label>
+                  <input matInput type="text"  placeholder="Indique información" id="serial" autocomplete="off">
+               </mat-form-field>
+
+               <mat-form-field>
+                <mat-label>Presión de timbre</mat-label>
+                   <input matInput type="text"  placeholder="Indique información" id="presion_timbre" autocomplete="off">
+                </mat-form-field>
+
+                <mat-form-field>
+                <mat-label>Contrapresión</mat-label>
+                   <input matInput type="text"  placeholder="Indique información" id="contrapresion" autocomplete="off">
+                </mat-form-field>
+
+                <mat-form-field>
+                <mat-label>Temp. operación</mat-label>
+                   <input matInput type="text"  placeholder="Indique información" id="temp_operacion" autocomplete="off">
+                </mat-form-field>    
+
+                <mat-form-field>
+                <mat-label>Presión prueba banco</mat-label>
+                   <input matInput type="text"  placeholder="Indique información" id="presion_prueba_banco" autocomplete="off">
+                </mat-form-field>
+    
+                <mat-form-field>
+                <mat-label>Capacidad alivío</mat-label>
+                   <input matInput type="text"  placeholder="Indique información" id="capacidad_alivio" autocomplete="off">
+                </mat-form-field>
+ 
+                <section class="example-section">
+                     <mat-label>Símbolo ASME</mat-label>
+                     <mat-checkbox class="example-margin">UV</mat-checkbox>
+                     <mat-checkbox class="example-margin">V</mat-checkbox>
+                </section>
+    
+                <mat-form-field class="mat-form-field-1">
+                <mat-label>Conexión entrada</mat-label>
+                   <input matInput type="text"  placeholder="Indique información" id="conexion_entrada" autocomplete="off">
+                </mat-form-field>
+    
+                <mat-form-field class="mat-form-field-1">
+                <mat-label>¿Bloqueo entrada?</mat-label>
+                   <input matInput type="text"  placeholder="Indique información" id="bloqueo_entrada" autocomplete="off">
+                </mat-form-field>
+
+                <mat-form-field class="mat-form-field-1">
+                <mat-label>Conexión salida</mat-label>
+                   <input matInput type="text"  placeholder="Indique información" id="conexion_salida" autocomplete="off">
+                </mat-form-field>
+
+                <mat-form-field class="mat-form-field-1">
+                <mat-label>¿Bloqueo salida?</mat-label>
+                   <input matInput type="text"  placeholder="Indique información" id="bloqueo_salida" autocomplete="off">
+                </mat-form-field>
+
+
+                <mat-form-field class="mat-form-field-3">
+                <mat-label>Descarga a</mat-label>
+                   <input matInput type="text"  placeholder="Indique información" id="descarga" autocomplete="off">
+                </mat-form-field>
+
+                <mat-form-field class="mat-form-field-2">
+                <mat-label>¿Fuelle?</mat-label>
+                   <input matInput type="text"  placeholder="Indique información" id="fuelle" autocomplete="off">
+                </mat-form-field>
+
+                <mat-form-field class="mat-form-field-2">
+                <mat-label>Orificio</mat-label>
+                   <input matInput type="text"  placeholder="Indique información" id="orificio" autocomplete="off">
+                </mat-form-field>
+
+                <mat-form-field class="mat-form-field-2">
+                <mat-label>¿Sisco ruptura?</mat-label>
+                   <input matInput type="text"  placeholder="Indique información" id="disco_ruptura" autocomplete="off">
+                </mat-form-field>
+                <div style="text-align: center;">
+                    <button mat-raised-button type="submit" color="warn">Actualizar</button>
+                    <button mat-stroked-button  type="reset">Cancelar</button> 
+                </div>    
+                
+
+            </form>
+            </mat-card-content>
+          </mat-card>
+
+
+    </mat-tab>
+    <mat-tab label="II. SOLICITUD DE MANTENIMIENTO MÁXIMO"> Content 2 </mat-tab>
+    <mat-tab label="III. PRUEBA INICIAL EN TALLER (CONDICIÓN RECIBIDO) (Pre Pop Test)"> Content 3 </mat-tab>
+    <mat-tab label="IV. PRUEBA CALIBRACIÓN FINAL EN TALLER (CONDICIÓN FINAL)"> Content 4 </mat-tab>
+    <mat-tab label="V. INSPECCIÓN PARTES INTERNAS VÁLVULA CONVENCIONAL"> Content 5 </mat-tab>
+   <!--  <mat-tab label="II. SOLICITUD DE MANTENIMIENTO MÁXIMO"> Content 2 </mat-tab>
+    <mat-tab label="III. PRUEBA INICIAL EN TALLER (CONDICIÓN RECIBIDO) (Pre Pop Test)"> Content 3 </mat-tab>
+    <mat-tab label="IV. PRUEBA CALIBRACIÓN FINAL EN TALLER (CONDICIÓN FINAL)"> Content 4 </mat-tab>
+    <mat-tab label="V. INSPECCIÓN PARTES INTERNAS VÁLVULA CONVENCIONAL"> Content 5 </mat-tab> -->
+  </mat-tab-group>
+
+

@@ -22,7 +22,6 @@ const routesint: Routes = [
     { path: 'reportes', loadChildren: () => import('./reportes/reportes.module').then(m => m.ReportesModule) },
     { path: 'usuario', loadChildren: () => import('./usuario/usuario.module').then(m => m.UsuarioModule) },
     { path: 'usuario-clave', loadChildren: () => import('./usuario-clave/usuario-clave.module').then(m => m.UsuarioClaveModule) },
-
     {path: '**', pathMatch:'full', redirectTo:''}
   ]},
  

@@ -1,1 +1,27 @@
-<p>nopagefound works!</p>
+<div class="container">
+    <div class="row-content">
+      <div class="row1">
+          <img [src]="urlImg">
+          <img src="../../assets/img/logoRepsol.png" class="logotipo-login">
+      </div>
+      <div class="row2">
+      <mat-card>
+        <mat-toolbar color="primary">
+           <mat-card-header>
+                <mat-card-title>
+                  <span>Disculpe, Página no encontrada</span>
+                  </mat-card-title>
+           </mat-card-header>
+        </mat-toolbar>
+        <mat-card-content>
+         <button mat-stroked-button  type="button" class="btn-block" color="primary" (click)="retornar()">
+             Regresar <i class="fa fa-home" aria-hidden="true"></i>
+         </button>
+        
+        </mat-card-content>
+      </mat-card>
+    </div>
+  
+    </div>
+  </div>
+  
