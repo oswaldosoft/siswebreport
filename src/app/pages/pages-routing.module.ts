@@ -2,14 +2,16 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { PagesComponent } from './pages/pages.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routesint: Routes = [
  
   {path: '', component: PagesComponent,
   children: [
-    {path: 'dashboard', component: PagesComponent,data:{title:'Dashboard'}},
+    { path: 'home', component: DashboardComponent,data:{title:'Dashboard'}},
     { path: 'dispositivos-alivios', loadChildren: () => import('./dispositivos-alivios/dispositivos-alivios.module').then(m => m.DispositivosAliviosModule) },
-    { path: 'alivio-seguridad', loadChildren: () => import('./alivio-seguridad/alivio-seguridad.module').then(m => m.AlivioSeguridadModule) },
+    { path: 'alivio-convencional', loadChildren: () => import('./alivio-seguridad/alivio-seguridad.module').then(m => m.AlivioSeguridadModule) },
+    { path: 'alivio-balanceada', loadChildren: () => import('./alivio-balanceada/alivio-balanceada.module').then(m => m.AlivioBalanceadaModule) },
     { path: 'alivio-termico', loadChildren: () => import('./alivio-termico/alivio-termico.module').then(m => m.AlivioTermicoModule) },
     { path: 'piloto-operada', loadChildren: () => import('./piloto-operada/piloto-operada.module').then(m => m.PilotoOperadaModule) },
     { path: 'presion-vacio', loadChildren: () => import('./presion-vacio/presion-vacio.module').then(m => m.PresionVacioModule) },
@@ -22,7 +24,8 @@ const routesint: Routes = [
     { path: 'reportes', loadChildren: () => import('./reportes/reportes.module').then(m => m.ReportesModule) },
     { path: 'usuario', loadChildren: () => import('./usuario/usuario.module').then(m => m.UsuarioModule) },
     { path: 'usuario-clave', loadChildren: () => import('./usuario-clave/usuario-clave.module').then(m => m.UsuarioClaveModule) },
-    {path: '**', pathMatch:'full', redirectTo:''}
+    { path: 'plan-inspeccion', loadChildren: () => import('./plan-inspeccion/plan-inspeccion.module').then(m => m.PlanInspeccionModule) },
+    {path: '**', pathMatch:'full', redirectTo:'home'}
   ]},
  
 ];

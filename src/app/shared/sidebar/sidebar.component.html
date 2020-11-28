@@ -7,9 +7,16 @@
             </ul>
         </li>
         <li class="menu-items-links">
+            <a href="#" class="items"><i class="fa fa-book" aria-hidden="true"></i>Plan de Inspección</a>
+            <ul class="subitems">
+                <li class="subitems-link"><a [routerLink]="['/dashboard/plan-inspeccion']"  class="link">Consultar</a></li>
+            </ul>
+        </li>
+        <li class="menu-items-links">
             <a href="#" class="items"><i class="fa fa-wrench" aria-hidden="true"></i>Tarado y mantenimiento</a>
             <ul class="subitems">
-                <li class="subitems-link"><a [routerLink]="['/dashboard/alivio-seguridad']" class="link">Alivio y/o seguridad</a></li>
+                <li class="subitems-link"><a [routerLink]="['/dashboard/alivio-convencional']" class="link">Alivio y/o convencional</a></li>
+                <li class="subitems-link"><a [routerLink]="['/dashboard/alivio-balanceada']" class="link">Alivio balanceada (fuelle)</a></li>
                 <li class="subitems-link"><a [routerLink]="['/dashboard/alivio-termico']" class="link">Alivio térmico</a></li>
                 <li class="subitems-link"><a [routerLink]="['/dashboard/piloto-operada']" class="link">Piloto operada</a></li>
                 <li class="subitems-link"><a [routerLink]="['/dashboard/presion-vacio']" class="link">Presión / vacío</a></li>

@@ -56,7 +56,7 @@ export class LoginComponent implements OnInit {
        //  this.router.navigate(['admin']);
        //  this.onResetForm();
       const {email, password} = this.loginForm.value;
-      this.router.navigate(['dashboard']); 
+      this.router.navigate(['dashboard/home']); 
 
 
     } else {

@@ -141,11 +141,12 @@ body{
           overflow-x: hidden;
           overflow-y: scroll;
           box-shadow: .2rem .2rem .8rem var(--color-grey-light-4);
-
+         
           .menu{
             width: 100%;
             line-height: 2rem;
-            
+            height: 100%;
+            margin-bottom:10rem;   
             &-items{
 
               &-links{
@@ -211,6 +212,7 @@ body{
           height: 100%;
           position: relative;
           overflow-y: visible;
+          
      
         }
 
@@ -288,16 +290,27 @@ table {
   border-collapse: collapse; 
   font-size: .8rem;
 }
-/* Zebra striping */
 tr:nth-of-type(odd) { 
   background: #eee; 
 }
+thead{
+  text-align: center;
+  justify-content: center;
+  
+}
+caption{
+  background: var(--color-secondary);
+  font-weight: bold;
+}
 th { 
   background: #333; 
+ //background: var(--color-secondary);
   color: white; 
   font-weight: 400;
   width: 10rem; 
   text-transform: uppercase;
+  text-align: center;
+  justify-content: center;
   
 }
 td, th { 
@@ -367,3 +380,47 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 
 /* fin datos técnicos*/
+
+
+/* valvulas container*/
+
+.table { 
+  width: 100%; 
+  border-collapse: collapse; 
+  font-size: .8rem;
+  text-align: center;
+}
+/* Zebra striping */
+.tr:nth-of-type(odd) { 
+  background: #eee; 
+}
+.th { 
+  background: #333; 
+  color: white; 
+  font-weight: 400;
+ // width: auto; 
+  text-align: center;
+  text-transform: uppercase;
+  
+}
+.td, .th { 
+ // padding: 6px; 
+  border: 1px solid #ccc; 
+  text-align: center;
+  height: .5rem; 
+  font-size: .8rem;
+  width: .5rem;
+}
+
+.tr:hover{
+  background-color:inherit !important;
+  color:#000;
+  opacity: 0.8;
+  
+}
+
+/* fin valvular container*/
+
+.td-num{
+  text-align: center;
+}

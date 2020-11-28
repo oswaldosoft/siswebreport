@@ -60,59 +60,41 @@
       }
     }
   
-    /* valvulas container*/
+ /* valvulas container*/
 
-table { 
-  width: 100%; 
-  border-collapse: collapse; 
-  font-size: .8rem;
-}
-/* Zebra striping */
-tr:nth-of-type(odd) { 
-  background: #eee; 
-}
-th { 
-  background: #333; 
-  color: white; 
-  font-weight: 400;
-  width: 10rem; 
-  text-transform: uppercase;
-  
-}
-td, th { 
-  padding: 6px; 
-  border: 1px solid #ccc; 
-  text-align: left; 
-}
-
-tr:hover{
- // background-color:#fe8200;
-  color:#fff;
-  opacity: 0.8;
-  
-}
-
-.insp-val-convencional-container{
-  @include flexbox;
-  flex-wrap: row wrap;
-  justify-content: space-around;
-  align-items: flex-start;
-  margin-bottom: 5rem;
-
-  &-imagen{
-      @include flexbox;
-
+  .table { 
+    width: 50%; 
+    border-collapse: collapse; 
+    font-size: .8rem;
+  }
+  /* Zebra striping */
+  .tr:nth-of-type(odd) { 
+    background: #eee; 
+  }
+  .th { 
+    background: #333; 
+    color: white; 
+    font-weight: 400;
+    width: 10rem; 
+    text-transform: uppercase;
+    
+  }
+  .td, .th { 
+    padding: 6px; 
+    border: 1px solid #ccc; 
+    text-align: left; 
   }
 
-  &-tablero{
-      @include flexbox;
-
+  .tr:hover{
+    background-color:none !important;
+    color:#fff;
+    opacity: 0 !important;
+    
   }
 
-}
 /* fin valvular container*/
 
-  }
+}
 
   .section-2 {
     display:block;
@@ -142,6 +124,15 @@ mat-tab-group{
     mat-form-field{
         margin-right: .7rem;
         width: 31%;
+        .busqueda-icon{
+          float:right; 
+          position: fixed; 
+          margin-left:-20px;
+          &:hover{
+            cursor: pointer;
+          }
+        }
+
     }
     
     .mat-form-field-1{
@@ -172,7 +163,41 @@ mat-tab-group{
   }
 
 
-  
+  .insp-val-convencional-container{
+    @include flexbox;
+    flex-wrap: row nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-bottom: 5rem;
+    border:1px solid red;
+
+    &-imagen{
+        @include flexbox;
+    //   display: block;
+    //    width: 60%;
+    //    float: right;
+
+    border:3px solid red;
+
+    }
+
+    &-tablero{
+        @include flexbox;
+     // display: block;
+   //     width: 30%;
+     //   float: left;
+     border:3px solid blue;
+     width: 80%;
+     font-size: 6rem;
+     
+     .td{
+        width: auto;
+        padding-left: 3rem;
+     }
+
+    }
+
+  } 
 
 
   

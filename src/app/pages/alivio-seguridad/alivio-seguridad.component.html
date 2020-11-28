@@ -1,1 +1,1017 @@
-<p>alivio-seguridad works!</p>
+<div class="alivio-convencional-container">
+    <mat-tab-group>
+       <mat-tab label="II. SOLICITUD DE MANTENIMIENTO MÁXIMO"> 
+          <mat-card>
+             <mat-card-content>
+               <form class="create-account-form"  autocomplete="off">
+                <mat-form-field class="mat-form-field-1" style="display: block;">
+                    <mat-label>TAG Seguridad</mat-label>
+                       <input matInput type="text"  placeholder="Indique información" id="tag_seguridad" autocomplete="off">
+                       <i class="fa fa-search busqueda-icon"  aria-hidden="true"></i>
+                    </mat-form-field>   
+                 <mat-form-field class="mat-form-field-1">
+                 <mat-label>N° de OT</mat-label>
+                    <input matInput type="text"  placeholder="Indique información" id="n_ot" autocomplete="off">
+                 </mat-form-field>
+     
+                 <mat-form-field class="mat-form-field-1">
+                 <mat-label>Prioridad</mat-label>
+                    <input matInput type="text"  placeholder="Indique información" id="prioridad" autocomplete="off">
+                 </mat-form-field>
+ 
+                 <mat-form-field class="mat-form-field-1">
+                 <mat-label>Tipo de actividad</mat-label>
+                    <input matInput type="text"  placeholder="Indique información" id="tipo_actividad" autocomplete="off">
+                 </mat-form-field>
+ 
+                 <mat-form-field class="mat-form-field-1">
+                 <mat-label>Motivo</mat-label>
+                    <input matInput type="text"  placeholder="Indique información" id="motivo" autocomplete="off">
+                 </mat-form-field>
+ 
+                 <div class="botones">
+                     <button mat-raised-button type="submit" color="warn">Guardar</button>
+                     <button mat-stroked-button  type="reset">Cancelar</button> 
+                 </div>    
+             </form>
+             </mat-card-content>
+          </mat-card>
+ 
+       </mat-tab>
+       <mat-tab label="III. PRUEBA INICIAL EN TALLER (CONDICIÓN RECIBIDO) (Pre Pop Test)">
+          <mat-card>
+             <mat-card-content>
+               <form class="create-account-form"  autocomplete="off">
+                <mat-form-field>
+                <mat-label>Presión de disparo</mat-label>
+                   <input matInput type="text"  placeholder="Indique información" id="presion_disparo" autocomplete="off">
+                </mat-form-field>
+   
+                <mat-form-field>
+                <mat-label>Presión de cierre</mat-label>
+                   <input matInput type="text"  placeholder="Indique información" id="presion_cierre" autocomplete="off">
+                </mat-form-field>
+   
+                <mat-form-field>
+                <mat-label>Purga (Blowdon) %</mat-label>
+                   <input matInput type="text"  placeholder="Indique información" id="critic_operativa" autocomplete="off">
+                </mat-form-field>
+                <section class="section-2">
+                <mat-label>Fluido utilizado para prueba:</mat-label>
+                   <mat-checkbox class="example-margin">Aire</mat-checkbox>
+                   <mat-checkbox class="example-margin">Agua</mat-checkbox>
+                   <mat-checkbox class="example-margin">Vapor</mat-checkbox>
+                </section>
+ 
+                <mat-form-field class="mat-form-field-1">
+                <mat-label>Prueba hermeticidad</mat-label>
+                  <input matInput type="text"  placeholder="Indique información" id="prueba_hermeticidad" autocomplete="off">
+                </mat-form-field>
+    
+                <mat-form-field class="mat-form-field-1">
+                <mat-label>Tiempo (min)</mat-label>
+                   <input matInput type="text"  placeholder="Indique información" id="tiempo_min" autocomplete="off">
+                </mat-form-field>
+ 
+                <mat-form-field class="mat-form-field-1">
+                <mat-label>Burbujas / min</mat-label>
+                   <input matInput type="text"  placeholder="Indique información" id="burbujas_min" autocomplete="off">
+                </mat-form-field>
+ 
+                <section class="section-1">
+                   <mat-label>Resultados:</mat-label>
+                   <mat-radio-group aria-label="Select an option">
+                      <mat-radio-button value="1">Ok</mat-radio-button>
+                      <mat-radio-button value="2">Fállo</mat-radio-button>
+                    </mat-radio-group>
+                </section>
+ 
+                <mat-form-field class="mat-form-field-5">
+                <mat-label>Prueba contrapresión</mat-label>
+                   <input matInput type="text"  placeholder="Indique información" id="prueba_contrapresion" autocomplete="off">
+                </mat-form-field>
+    
+                <mat-form-field class="mat-form-field-5">
+                <mat-label>Tiempo (min)</mat-label>
+                   <input matInput type="text"  placeholder="Indique información" id="tiempo_min" autocomplete="off">
+                </mat-form-field>
+    
+                <section class="section-1">
+                   <mat-label>Resultados:</mat-label>
+                   <mat-radio-group aria-label="Select an option">
+                      <mat-radio-button value="1">Ok</mat-radio-button>
+                      <mat-radio-button value="2">Fállo</mat-radio-button>
+                   </mat-radio-group>
+                </section>
+ 
+                <mat-form-field class="mat-form-field-1">
+                <mat-label>Altura tornillo (mm)</mat-label>
+                   <input matInput type="text"  placeholder="Indique información" id="altura_tornillo_mm" autocomplete="off">
+                </mat-form-field>
+ 
+                <mat-form-field class="mat-form-field-1">
+                <mat-label>Posición anillo ajuste (#vueltas)</mat-label>
+                  <input matInput type="text"  placeholder="Indique información" id="posicion_anillo_ajustes_v" autocomplete="off">
+                </mat-form-field>
+ 
+                <mat-form-field class="mat-form-field-1">
+                <mat-label>Superior</mat-label>
+                   <input matInput type="text"  placeholder="Indique información" id="superior" autocomplete="off">
+                </mat-form-field>
+ 
+                <mat-form-field class="mat-form-field-1">
+                <mat-label>Inferior</mat-label>
+                   <input matInput type="text"  placeholder="Indique información" id="inferior" autocomplete="off">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                <mat-label>Observaciones</mat-label>
+                   <textarea matInput placeholder="Comentarios..."></textarea>
+                </mat-form-field>
+ 
+                <mat-form-field class="mat-form-field-4">
+                <mat-label>Nombre ORGANISMO DE CONTROL AUTORIZADO</mat-label>
+                   <input matInput type="text"  placeholder="Indique información" id="nombre_oca" autocomplete="off">
+                </mat-form-field>
+ 
+                <mat-form-field class="mat-form-field-4">
+                <mat-label>Nombre POR MANTENIMIENTO TALLER CONTRATISTA</mat-label>
+                   <input matInput type="text"  placeholder="Indique información" id="nombre_contratista" autocomplete="off">
+                </mat-form-field>
+ 
+                 <div class="botones">
+                     <button mat-raised-button type="submit" color="warn">Guardar</button>
+                     <button mat-stroked-button  type="reset">Cancelar</button> 
+                 </div>    
+             </form>
+             </mat-card-content>
+           </mat-card>
+ 
+       </mat-tab>
+       <mat-tab label="IV. PRUEBA CALIBRACIÓN FINAL EN TALLER (CONDICIÓN FINAL)">
+          <mat-card>
+             <mat-card-content>
+               <form class="create-account-form"  autocomplete="off">
+                <mat-form-field>
+                <mat-label>Presión de disparo</mat-label>
+                   <input matInput type="text"  placeholder="Indique información" id="presion_disparo" autocomplete="off">
+                </mat-form-field>
+   
+                <mat-form-field>
+                <mat-label>Presión de cierre</mat-label>
+                   <input matInput type="text"  placeholder="Indique información" id="presion_cierre" autocomplete="off">
+                </mat-form-field>
+   
+                <mat-form-field>
+                <mat-label>Purga (Blowdon) %</mat-label>
+                   <input matInput type="text"  placeholder="Indique información" id="critic_operativa" autocomplete="off">
+                </mat-form-field>
+                <section class="section-2">
+                <mat-label>Fluido utilizado para prueba:</mat-label>
+                   <mat-checkbox class="example-margin">Aire</mat-checkbox>
+                   <mat-checkbox class="example-margin">Agua</mat-checkbox>
+                   <mat-checkbox class="example-margin">Vapor</mat-checkbox>
+                </section>
+ 
+                <mat-form-field class="mat-form-field-1">
+                <mat-label>Prueba hermeticidad</mat-label>
+                  <input matInput type="text"  placeholder="Indique información" id="prueba_hermeticidad" autocomplete="off">
+                </mat-form-field>
+    
+                <mat-form-field class="mat-form-field-1">
+                <mat-label>Tiempo (min)</mat-label>
+                   <input matInput type="text"  placeholder="Indique información" id="tiempo_min" autocomplete="off">
+                </mat-form-field>
+ 
+                <mat-form-field class="mat-form-field-1">
+                <mat-label>Burbujas / min</mat-label>
+                   <input matInput type="text"  placeholder="Indique información" id="burbujas_min" autocomplete="off">
+                </mat-form-field>
+ 
+                <section class="section-1">
+                   <mat-label>Resultados:</mat-label>
+                   <mat-radio-group aria-label="Select an option">
+                      <mat-radio-button value="1">Ok</mat-radio-button>
+                      <mat-radio-button value="2">Fállo</mat-radio-button>
+                    </mat-radio-group>
+                </section>
+ 
+                <mat-form-field class="mat-form-field-5">
+                <mat-label>Prueba contrapresión</mat-label>
+                   <input matInput type="text"  placeholder="Indique información" id="prueba_contrapresion" autocomplete="off">
+                </mat-form-field>
+    
+                <mat-form-field class="mat-form-field-5">
+                <mat-label>Tiempo (min)</mat-label>
+                   <input matInput type="text"  placeholder="Indique información" id="tiempo_min" autocomplete="off">
+                </mat-form-field>
+    
+                <section class="section-1">
+                   <mat-label>Resultados:</mat-label>
+                   <mat-radio-group aria-label="Select an option">
+                      <mat-radio-button value="1">Ok</mat-radio-button>
+                      <mat-radio-button value="2">Fállo</mat-radio-button>
+                   </mat-radio-group>
+                </section>
+ 
+                <mat-form-field class="mat-form-field-1">
+                <mat-label>Altura tornillo (mm)</mat-label>
+                   <input matInput type="text"  placeholder="Indique información" id="altura_tornillo_mm" autocomplete="off">
+                </mat-form-field>
+ 
+                <mat-form-field class="mat-form-field-1">
+                <mat-label>Posición anillo ajuste (#vueltas)</mat-label>
+                  <input matInput type="text"  placeholder="Indique información" id="posicion_anillo_ajustes_v" autocomplete="off">
+                </mat-form-field>
+ 
+                <mat-form-field class="mat-form-field-1">
+                <mat-label>Superior</mat-label>
+                   <input matInput type="text"  placeholder="Indique información" id="superior" autocomplete="off">
+                </mat-form-field>
+ 
+                <mat-form-field class="mat-form-field-1">
+                <mat-label>Inferior</mat-label>
+                   <input matInput type="text"  placeholder="Indique información" id="inferior" autocomplete="off">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                <mat-label>Observaciones</mat-label>
+                   <textarea matInput placeholder="Comentarios..."></textarea>
+                </mat-form-field>
+ 
+                <mat-form-field class="mat-form-field-4">
+                <mat-label>Nombre ORGANISMO DE CONTROL AUTORIZADO</mat-label>
+                   <input matInput type="text"  placeholder="Indique información" id="nombre_oca" autocomplete="off">
+                </mat-form-field>
+ 
+                <mat-form-field class="mat-form-field-4">
+                <mat-label>Nombre POR MANTENIMIENTO TALLER CONTRATISTA</mat-label>
+                   <input matInput type="text"  placeholder="Indique información" id="nombre_contratista" autocomplete="off">
+                </mat-form-field>
+ 
+                 <div class="botones">
+                     <button mat-raised-button type="submit" color="warn">Guardar</button>
+                     <button mat-stroked-button  type="reset">Cancelar</button> 
+                 </div>    
+             </form>
+             </mat-card-content>
+           </mat-card> 
+       </mat-tab>
+       <mat-tab label="V. INSPECCIÓN PARTES INTERNAS VÁLVULA CONVENCIONAL"> 
+          <mat-card>
+             <mat-card-content>
+               <form class="create-account-form"  autocomplete="off">
+                 <div class="insp-val-convencional-container">
+                   <div class="insp-val-convencional-container-tablero">
+                         <table class="table">
+                             <thead>
+                             <tr>
+                                 <th class="th">N°</th>
+                                 <th class="th" style="width: 400px;">Componente</th>
+                                 <th class="th" style="width: 100px;">Recibido</th>
+                                 <th class="th">Acción</th>
+                                 <th class="th">Final</th>
+                             </tr>
+                             </thead>
+                             <tbody>
+                             <tr class="tr"><td class="td-num">1</td><td class="td">Cuerpo</td>
+                               <td class="td">
+                                  <mat-form-field>
+                                     <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+ 
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                     </mat-select>
+                                  </mat-form-field>
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                       <mat-option *ngFor="let food of foods" [value]="food.value">
+                                        {{food.viewValue}}
+                                       </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+                               </td>
+                            </tr>
+                             <tr class="tr"><td class="td-num">2</td><td class="td">Boquilla</td>
+                               <td class="td">
+                                  <mat-form-field>
+                                     <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+ 
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                     </mat-select>
+                                  </mat-form-field>
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                       <mat-option *ngFor="let food of foods" [value]="food.value">
+                                        {{food.viewValue}}
+                                       </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+                               </td>
+                            </tr>
+                             <tr class="tr"><td class="td">3</td><td class="td">Almena (anillo ajuste)</td>
+                               <td class="td">
+                                  <mat-form-field>
+                                     <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+ 
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                     </mat-select>
+                                  </mat-form-field>
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                       <mat-option *ngFor="let food of foods" [value]="food.value">
+                                        {{food.viewValue}}
+                                       </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+                               </td>
+                            </tr>
+                             <tr class="tr"><td class="td">4</td><td class="td">Pin de ajuste de Almena</td>
+                               <td class="td">
+                                  <mat-form-field>
+                                     <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+ 
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                     </mat-select>
+                                  </mat-form-field>
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                       <mat-option *ngFor="let food of foods" [value]="food.value">
+                                        {{food.viewValue}}
+                                       </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+                               </td>
+                            </tr>
+                             <tr class="tr"><td class="td">5</td><td class="td">Junta de pin de Almena</td>
+                               <td class="td">
+                                  <mat-form-field>
+                                     <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+ 
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                     </mat-select>
+                                  </mat-form-field>
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                       <mat-option *ngFor="let food of foods" [value]="food.value">
+                                        {{food.viewValue}}
+                                       </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+                               </td>
+                            </tr>
+                             <tr class="tr"><td class="td">6</td><td class="td">Disco</td>
+                               <td class="td">
+                                  <mat-form-field>
+                                     <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+ 
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                     </mat-select>
+                                  </mat-form-field>
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                       <mat-option *ngFor="let food of foods" [value]="food.value">
+                                        {{food.viewValue}}
+                                       </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+                               </td>
+                            </tr>
+                             <tr class="tr"><td class="td">7</td><td class="td">Retenedor del Disco</td>
+                               <td class="td">
+                                  <mat-form-field>
+                                     <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+ 
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                     </mat-select>
+                                  </mat-form-field>
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                       <mat-option *ngFor="let food of foods" [value]="food.value">
+                                        {{food.viewValue}}
+                                       </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+                               </td>
+                            </tr>
+                             <tr class="tr"><td class="td">8</td><td class="td">Porta disco</td>
+                               <td class="td">
+                                  <mat-form-field>
+                                     <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+ 
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                     </mat-select>
+                                  </mat-form-field>
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                       <mat-option *ngFor="let food of foods" [value]="food.value">
+                                        {{food.viewValue}}
+                                       </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+                               </td>
+                            </tr>
+                             <tr class="tr"><td class="td">9</td><td class="td">Guía</td>
+                               <td class="td">
+                                  <mat-form-field>
+                                     <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+ 
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                     </mat-select>
+                                  </mat-form-field>
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                       <mat-option *ngFor="let food of foods" [value]="food.value">
+                                        {{food.viewValue}}
+                                       </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+                               </td>
+                            </tr>
+                             <tr class="tr"><td class="td">10</td><td class="td">Junta de la guía</td>
+                               <td class="td">
+                                  <mat-form-field>
+                                     <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+ 
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                     </mat-select>
+                                  </mat-form-field>
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                       <mat-option *ngFor="let food of foods" [value]="food.value">
+                                        {{food.viewValue}}
+                                       </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+                               </td>
+                            </tr>
+                             <tr class="tr"><td class="td">11</td><td class="td">Bonete</td>
+                               <td class="td">
+                                  <mat-form-field>
+                                     <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+ 
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                     </mat-select>
+                                  </mat-form-field>
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                       <mat-option *ngFor="let food of foods" [value]="food.value">
+                                        {{food.viewValue}}
+                                       </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+                               </td>
+                            </tr>
+                             <tr class="tr"><td class="td">12</td><td class="td">Junta del bonete</td>
+                               <td class="td">
+                                  <mat-form-field>
+                                     <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+ 
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                     </mat-select>
+                                  </mat-form-field>
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                       <mat-option *ngFor="let food of foods" [value]="food.value">
+                                        {{food.viewValue}}
+                                       </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+                               </td>
+                            </tr>
+                             <tr class="tr"><td class="td">13</td><td class="td">Esparrago del cuerpo</td>
+                               <td class="td">
+                                  <mat-form-field>
+                                     <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+ 
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                     </mat-select>
+                                  </mat-form-field>
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                       <mat-option *ngFor="let food of foods" [value]="food.value">
+                                        {{food.viewValue}}
+                                       </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+                               </td>
+                            </tr>
+                             <tr class="tr"><td class="td">14</td><td class="td">Tuerca del cuerpo</td>
+                               <td class="td">
+                                  <mat-form-field>
+                                     <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+ 
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                     </mat-select>
+                                  </mat-form-field>
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                       <mat-option *ngFor="let food of foods" [value]="food.value">
+                                        {{food.viewValue}}
+                                       </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+                               </td>
+                            </tr>
+                             <tr class="tr"><td class="td">15</td><td class="td">Vástago</td>
+                               <td class="td">
+                                  <mat-form-field>
+                                     <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+ 
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                     </mat-select>
+                                  </mat-form-field>
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                       <mat-option *ngFor="let food of foods" [value]="food.value">
+                                        {{food.viewValue}}
+                                       </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+                               </td>
+                            </tr>
+                             <tr class="tr"><td class="td">16</td><td class="td">Retenedor del Vástago</td>
+                               <td class="td">
+                                  <mat-form-field>
+                                     <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+ 
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                     </mat-select>
+                                  </mat-form-field>
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                       <mat-option *ngFor="let food of foods" [value]="food.value">
+                                        {{food.viewValue}}
+                                       </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+                               </td>
+                            </tr>
+                             <tr class="tr"><td class="td">17</td><td class="td">Arandelas del Muelle</td>
+                               <td class="td">
+                                  <mat-form-field>
+                                     <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+ 
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                     </mat-select>
+                                  </mat-form-field>
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                       <mat-option *ngFor="let food of foods" [value]="food.value">
+                                        {{food.viewValue}}
+                                       </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+                               </td>
+                            </tr>
+                             <tr class="tr"><td class="td">18</td><td class="td">Muelle</td>
+                               <td class="td">
+                                  <mat-form-field>
+                                     <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+ 
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                     </mat-select>
+                                  </mat-form-field>
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                       <mat-option *ngFor="let food of foods" [value]="food.value">
+                                        {{food.viewValue}}
+                                       </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+                               </td>
+                            </tr>
+                             <tr class="tr"><td class="td">19</td><td class="td">Tornillo de ajuste</td>
+                               <td class="td">
+                                  <mat-form-field>
+                                     <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+ 
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                     </mat-select>
+                                  </mat-form-field>
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                       <mat-option *ngFor="let food of foods" [value]="food.value">
+                                        {{food.viewValue}}
+                                       </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+                               </td>
+                            </tr>
+                             <tr class="tr"><td class="td">20</td><td class="td">Tuerca del bloqueo</td>
+                               <td class="td">
+                                  <mat-form-field>
+                                     <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+ 
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                     </mat-select>
+                                  </mat-form-field>
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                       <mat-option *ngFor="let food of foods" [value]="food.value">
+                                        {{food.viewValue}}
+                                       </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+                               </td>
+                            </tr>
+                             <tr class="tr"><td class="td">21</td><td class="td">Caperuza</td>
+                               <td class="td">
+                                  <mat-form-field>
+                                     <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+ 
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                     </mat-select>
+                                  </mat-form-field>
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                       <mat-option *ngFor="let food of foods" [value]="food.value">
+                                        {{food.viewValue}}
+                                       </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+                               </td>
+                            </tr>
+                             <tr class="tr"><td class="td">27</td><td class="td">Junta de Caperuza</td>
+                               <td class="td">
+                                  <mat-form-field>
+                                     <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+ 
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                     </mat-select>
+                                  </mat-form-field>
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                       <mat-option *ngFor="let food of foods" [value]="food.value">
+                                        {{food.viewValue}}
+                                       </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+                               </td>
+                            </tr>
+                             <tr class="tr"><td class="td">40</td><td class="td">Tubo Eductor</td>
+                               <td class="td">
+                                  <mat-form-field>
+                                     <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+ 
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                     </mat-select>
+                                  </mat-form-field>
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                       <mat-option *ngFor="let food of foods" [value]="food.value">
+                                        {{food.viewValue}}
+                                       </mat-option>
+                                  </mat-select>
+                                  </mat-form-field>
+                               </td>
+                            </tr>
+                             <tr class="tr"><td class="td">41</td><td class="td">Tapo de Venteo</td>
+                               <td class="td">
+                                  <mat-form-field>
+                                     <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.vewValue}}
+                                    </mat-option>                  
+                                  </mat-select>
+                                  </mat-form-field>
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                      <mat-select>
+                                     <mat-option *ngFor="let food of foods" [value]="food.value">
+                                     {{food.viewValue}}
+                                     </mat-option>
+                                     </mat-select>
+                                  </mat-form-field>
+                               </td>
+                               <td class="td">
+                                  <mat-form-field>
+                                            <mat-select>
+                                        <mat-option *ngFor="let food of foods" [value]="food.value">
+                                        {{food.viewValue}}
+                                        </mat-option>
+                                        </mat-select>
+                                     </mat-form-field>
+                               </td>
+                            </tr>
+                             </tbody>
+                         </table>
+                      </div>
+                   <!-- <div class="insp-val-convencional-container-imagen">
+                      <div class="seg-conv-container-img">
+                         <img src="../../../assets/img/seguridad-convencional.png" class="">
+                     </div>
+                   </div> -->
+ 
+                 </div>
+ 
+                 <div class="botones">
+                     <button mat-raised-button type="submit" color="warn">Guardar</button>
+                     <button mat-stroked-button  type="reset">Cancelar</button> 
+                 </div>    
+             </form>
+             </mat-card-content>
+          </mat-card>
+      </mat-tab>
+    </mat-tab-group>
+ </div>
+ 
+ 
+ 
