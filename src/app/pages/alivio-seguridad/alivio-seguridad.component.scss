@@ -172,27 +172,15 @@
       justify-content: space-around;
       align-items: flex-start;
       margin-bottom: 5rem;
-      border:1px solid red;
   
       &-imagen{
           @include flexbox;
-      //   display: block;
-      //    width: 60%;
-      //    float: right;
-  
-      border:3px solid red;
-  
       }
   
       &-tablero{
-          @include flexbox;
-       // display: block;
-     //     width: 30%;
-       //   float: left;
-       border:3px solid blue;
-       width: 100%;
-       font-size: 6rem;
-       
+        @include flexbox;
+        width: 100%;
+        font-size: 6rem;
        .td{
           width: auto;
           padding-left: 3rem;

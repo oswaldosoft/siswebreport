@@ -5,11 +5,12 @@ import { PagesComponent } from './pages/pages.component';
 import { PagesRoutingModule } from './pages-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { MaterialModule } from '../material/material.module';
+import { AlivioSeguridadModule } from './alivio-seguridad/alivio-seguridad.module';
 
 @NgModule({
   declarations: [DashboardComponent, PagesComponent],
   imports: [
-    CommonModule, SharedModule, MaterialModule, PagesRoutingModule
+    CommonModule, SharedModule, MaterialModule,AlivioSeguridadModule, PagesRoutingModule
   ],exports:[
     DashboardComponent, PagesComponent
   ]

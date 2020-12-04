@@ -10,6 +10,6 @@ import { SeguridadConvencionalComponent } from './seguridad-convencional.compone
   imports: [
     CommonModule,
     SeguridadConvencionalRoutingModule
-  ]
+  ],exports:[SeguridadConvencionalComponent]
 })
 export class SeguridadConvencionalModule { }
