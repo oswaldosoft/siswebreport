@@ -10,6 +10,6 @@ import { SeguridadBalanceadaComponent } from './seguridad-balanceada.component';
   imports: [
     CommonModule,
     SeguridadBalanceadaRoutingModule
-  ]
+  ],exports:[SeguridadBalanceadaComponent]
 })
 export class SeguridadBalanceadaModule { }
