@@ -36,6 +36,10 @@ body{
   
 }
 
+html, body { height: 100%; }
+body {
+  // margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
 
 @mixin flexbox {
     display:-webkit-flex; 
@@ -278,14 +282,16 @@ body{
 }
 
 
+/*Scroll de la pagina*/
 ::-webkit-scrollbar-thumb {background-color: #f85032;}
-::-webkit-scrollbar { width: 0.3rem;}
+::-webkit-scrollbar { width: .3rem;}
 ::-webkit-scrollbar-track {background-color: #b8b8ba;}
+
 /* inicio pages container*/
 
 /* valvulas container*/
 
-table { 
+/* table { 
   width: 100%; 
   border-collapse: collapse; 
   font-size: .8rem;
@@ -304,7 +310,6 @@ caption{
 }
 th { 
   background: #333; 
- //background: var(--color-secondary);
   color: white; 
   font-weight: 400;
   width: 10rem; 
@@ -324,32 +329,15 @@ tr:hover{
   color:#fff;
   opacity: 0.8;
   
-}
-
-/* .valvulas-container{
-  @include flexbox;
-  flex-wrap: row wrap;
-  justify-content: space-around;
-  align-items: flex-start;
-  margin-bottom: 5rem;
- 
-  &-img{
-      @include flexbox;
-  }
-
-  &-table{
-      @include flexbox;
-  }
-
 } */
-/* fin valvular container*/
 
 /* inicio secciones */
 .secciones{
-  //display: flex;
   @include flexbox;
-  color:#000;
-  font-weight: bold;
+ color: var(--color-secondary);
+  font-size: .9rem !important;
+  text-decoration: underline;
+  margin-top: 3rem;
 }
 
 .valvulas-container{
@@ -357,12 +345,42 @@ tr:hover{
     flex-wrap: row nowrap;
     width: 100%;
     justify-content: space-around;
-   // margin-bottom: 5rem;
     margin-top: 1rem;
 
     .seg-conv-container-img{
-      
+      margin-right: 2rem;
+      @include flexbox;
+      table{
+        width: 20rem;
+       
+        th{
+          @include flexbox;
+          justify-content: center;
+          align-items: center;
+          background: var(--color-secondary);
+          color: white; 
+          text-transform: uppercase;
+          font-size: .8rem;
+          font-weight: normal;
+          justify-content: center !important;
+          height: 3.5rem;
+        }
+        
+        tr{
+          td{
+            text-align: center;
+            img{
+              margin-top: .5rem;
+            }
 
+            .responsive {
+              max-width: 100%;
+              height: auto;
+            }
+          }
+        }
+      
+      }
     }
 
     .seg-conv-container-tablero{
@@ -372,26 +390,42 @@ tr:hover{
         width: 30rem;
         margin-bottom: 5rem;
         
-        tr{
-          th{
-            text-align: center;
-          }
-          
+        .mat-sort-header-container , th{
+         // background: #333; 
+        // background: #DBDBDB;
+          background: var(--color-secondary);
+          color: white; 
+         // color:#2c3e50;
+          text-transform: uppercase;
+          font-size: .8rem;
+          justify-content: center !important;
+        }
+        
+        tr.mat-row{
           td{
             text-align: center;
+            font-size: .8rem;
+            color:#333;
           }
-          
+        
         }
+      
       }
 
+      tr.mat-row:hover {
+        background: #F2F2F2;
+      }
     }
 
 }
 
+/* td:hover{
+  color:white;
+} */
+
 
 /* fin secciones*/
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
 
 /* Inicio datos técnicos*/
 .mat-ink-bar{ 
@@ -421,13 +455,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 /* valvulas container*/
 
-.table { 
+/* .table { 
   width: 100%; 
   border-collapse: collapse; 
   font-size: .8rem;
   text-align: center;
 }
-/* Zebra striping */
+
 .tr:nth-of-type(odd) { 
   background: #eee; 
 }
@@ -435,7 +469,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   background: #333; 
   color: white; 
   font-weight: 400;
- // width: auto; 
   text-align: center;
   text-transform: uppercase;
   
@@ -453,7 +486,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   color:#000;
   opacity: 0.8;
   
-}
+} */
 
 /* fin valvular container*/
 
@@ -476,3 +509,146 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   height: 2.5rem;
 }
  */
+
+ 
+
+
+/*Inicio Tabla formulario alivio convencional */
+ .insp-val-convencional-container{
+  @include flexbox;
+  flex-wrap: row nowrap;
+  //justify-content: space-around;
+  justify-content: center; 
+  margin-bottom: 5rem;
+
+  &-tablero{
+    @include flexbox;
+    width: 100%;
+    justify-content: center;
+
+    table{
+      width: 90%;
+      margin-bottom: 3rem;
+    
+      .mat-sort-header-container , th{
+        background: var(--color-secondary);
+        color: white; 
+        text-transform: uppercase;
+        font-size: .8rem;
+        text-align: center;
+        justify-content: center !important;
+        text-align: center;
+      }
+      
+      tr.mat-row{
+        td{
+          text-align: center;
+          font-size: .8rem;
+          color:#333;
+        }
+      
+      }
+    
+    }
+
+  }
+
+} 
+
+/*Fin Tabla formulario alivio convencional */
+
+/*Inicio Tabla Dasboard */
+.dashboard-container{
+
+}
+
+/*Fin Tabla Dashboard */
+
+
+@media only screen and (max-width: 600px) {
+  .valvulas-container{
+    @include flexbox;
+    width: 100%;
+    display: flex; 
+    flex-flow: column wrap; 
+    width: 100%; 
+    height: 100%;
+    justify-content: flex-start;
+
+    .seg-conv-container-img{
+      @include flexbox;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 3rem;
+      table{
+        width: 20rem;
+       
+        th{
+          @include flexbox;
+          justify-content: center;
+          align-items: center;
+          background: var(--color-secondary);
+          color: white; 
+          text-transform: uppercase;
+          font-size: .8rem;
+          font-weight: normal;
+          justify-content: center !important;
+          height: 3.5rem;
+        }
+        
+        tr{
+          td{
+            text-align: center;
+            width: 100%;
+            img{
+              margin-top: .5rem;
+              width: 100%;
+            }
+          }
+        }
+      
+      }
+    }
+
+    .seg-conv-container-tablero{
+      @include flexbox;
+      justify-content: center;
+      width: 100%;
+      table{
+        width: 20rem;
+        margin-bottom: 5rem;
+       
+        .mat-sort-header-container , th{
+          background: var(--color-secondary);
+          color: white; 
+          text-transform: uppercase;
+          font-size: .8rem;
+          justify-content: center !important;
+        }
+        
+        tr.mat-row{
+          td{
+            text-align: center;
+            font-size: .8rem;
+            color:#333;
+          }
+        
+        }
+      
+      }
+
+      tr.mat-row:hover {
+        background: #F2F2F2;
+      }
+    }
+
+}
+
+ 
+}
+
+.mat-tab-body-content{
+  height: 100%;
+  overflow: hidden !important;
+  overflow-y: hidden !important;
+}

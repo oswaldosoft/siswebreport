@@ -60,42 +60,6 @@
           width: 500px !important;
         }
       }
-    
-   /* valvulas container*/
-  
-    .table { 
-      width: 50%; 
-      border-collapse: collapse; 
-      font-size: .8rem;
-    }
-    /* Zebra striping */
-    .tr:nth-of-type(odd) { 
-      background: #eee; 
-    }
-    .th { 
-      background: #333; 
-      color: white; 
-      font-weight: 400;
-      width: 10rem; 
-      text-transform: uppercase;
-      
-    }
-    .td, .th { 
-      padding: 6px; 
-      border: 1px solid #ccc; 
-      text-align: left; 
-    }
-    
-   
-  
-    .tr:hover{
-      background-color:none !important;
-      color:#fff;
-      opacity: 0 !important;
-      
-    }
-  
-  /* fin valvular container*/
   
   }
   
@@ -119,11 +83,6 @@
   mat-tab-group{
       width: 95%;
     
-      /* .mat-tab-label{
-        font-size: .8rem;
-        color:red !important;
-      }   */
-  
       mat-form-field{
           margin-right: .7rem;
           width: 31%;
@@ -165,32 +124,6 @@
     
     }
   
-  
-    .insp-val-convencional-container{
-      @include flexbox;
-      flex-wrap: row nowrap;
-      justify-content: space-around;
-      align-items: flex-start;
-      margin-bottom: 5rem;
-  
-      &-imagen{
-          @include flexbox;
-      }
-  
-      &-tablero{
-        @include flexbox;
-        width: 100%;
-        font-size: 6rem;
-       .td{
-          width: auto;
-          padding-left: 3rem;
-       }
-  
-      }
-  
-    } 
-  
-     
   ::ng-deep .create-account-form {
       .mat-focused .mat-form-field-ripple {
         /*change color of underline when focused*/
@@ -200,5 +133,4 @@
         /*change color of label when focused*/
         color: #e43a15 !important;
        }
-    }
-  
+    }  
