@@ -1,3 +1,145 @@
+<input type="file" (change)="onFileChange($event)" multiple="false" />
+
+<!-- <table>
+    <tbody>
+        <tr *ngFor="let row of data">
+                <td *ngFor="let cell of row">
+                        {{cell}}
+                </td>
+        </tr>
+    </tbody>
+</table> -->
+
+<!-- <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+            <ng-container matColumnDef="position">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Items. </th>
+              <td class="tde" mat-cell *matCellDef="let element"> {{element.position}} </td>
+            </ng-container>
+          
+            <ng-container matColumnDef="descripcion">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Descripción </th>
+              <td class="tde" mat-cell *matCellDef="let element"> {{element.descripcion}} </td>
+            </ng-container>
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+ </table>
+ unidad:string;
+  responsable:string;
+  tag:string;
+  ca:string;
+  frec_years:number;
+  fecha_ultimo_tarado:string;
+  year_ultimo_tarado:number;
+  fecha_proximo_tarado_x_year:number;
+  year_de_proximo_tarado_x_categoria:number;
+  nueva:string;
+  correct:string;
+  plan_ordinario:string;
+  ciclo_parada:string;
+  sts:number;
+  prio:string;
+  tipo_activ:string;
+  motivo:string;
+'unidad', 'responsable','tag','cat','frec_years','fecha_ultimo_tarado','year_ultimo_tarado','fecha_proximo_tarado_x_year','year_de_proximo_tarado_x_categoria',  'nueva','correct','plan_ordinario','ciclo_parada','sts','prio','tipo_activ','motivo'
+-->
+
+  <mat-form-field>
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+  </mat-form-field>
+
+  <table mat-table [dataSource]="dataSources" matSort class="mat-elevation-z8">
+    <ng-container matColumnDef="unidad">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Unidad. </th>
+      <td class="tde" mat-cell *matCellDef="let element"> {{element.unidad}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="responsable">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Responsable </th>
+      <td class="tde" mat-cell *matCellDef="let element"> {{element.responsable}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="tag">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> tag </th>
+        <td class="tde" mat-cell *matCellDef="let element"> {{element.tag}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="cat">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> cat </th>
+        <td class="tde" mat-cell *matCellDef="let element"> {{element.cat}} </td> 
+    </ng-container>
+    
+    <ng-container matColumnDef="frec_years">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> frec años </th>
+        <td class="tde" mat-cell *matCellDef="let element"> {{element.frec_years}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="fecha_ultimo_tarado">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> fecha último tarado </th>
+        <td class="tde" mat-cell *matCellDef="let element"> {{element.fecha_ultimo_tarado}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="year_ultimo_tarado">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> año último tarado </th>
+        <td class="tde" mat-cell *matCellDef="let element"> {{element.year_ultimo_tarado}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="fecha_proximo_tarado_x_year">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> fecha proximo tarado x año </th>
+        <td class="tde" mat-cell *matCellDef="let element"> {{element.fecha_proximo_tarado_x_year}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="year_de_proximo_tarado_x_categoria">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> año de proximo tarado x categotia </th>
+        <td class="tde" mat-cell *matCellDef="let element"> {{element.year_de_proximo_tarado_x_categoria}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="nueva">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> nueva </th>
+        <td class="tde" mat-cell *matCellDef="let element"> {{element.nueva}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="correct">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> correct </th>
+        <td class="tde" mat-cell *matCellDef="let element"> {{element.correct}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="plan_ordinario">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> plan ordinario </th>
+        <td class="tde" mat-cell *matCellDef="let element"> {{element.plan_ordinario}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="ciclo_parada">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> ciclo parada </th>
+        <td class="tde" mat-cell *matCellDef="let element"> {{element.ciclo_parada}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="sts">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> ST .s </th>
+        <td class="tde" mat-cell *matCellDef="let element"> {{element.sts}} </td>
+    </ng-container>
+    
+    <ng-container matColumnDef="prio">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> prioridad </th>
+        <td class="tde" mat-cell *matCellDef="let element"> {{element.prio}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="tipo_activ">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> tipo actividad </th>
+        <td class="tde" mat-cell *matCellDef="let element"> {{element.tipo_activ}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="motivo">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>motivo </th>
+        <td class="tde" mat-cell *matCellDef="let element"> {{element.motivo}} </td>
+    </ng-container>
+    
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumnas"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumnas;"></tr>
+</table>
+<mat-paginator [pageSizeOptions]="[5, 10, 20,50]" showFirstLastButtons ></mat-paginator>
 <!-- <div class="dashboard-container">
     <div class="dashboard-container-tablero-uno">
         

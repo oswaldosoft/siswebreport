@@ -1,13 +1,40 @@
-//import { Component, OnInit } from '@angular/core';
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import {MatTableDataSource} from '@angular/material/table';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
+import * as XLSX from 'xlsx';
+
+
 
 export interface Datos {
   position: number;
   descripcion: string;
 }
+
+ interface Dato {
+  unidad:string;
+  responsable:string;
+  tag:string;
+  cat:string;
+  frec_years:number;
+  fecha_ultimo_tarado:string;
+  year_ultimo_tarado:number;
+  fecha_proximo_tarado_x_year:number;
+  year_de_proximo_tarado_x_categoria:number;
+  nueva:string;
+  correct:string;
+  plan_ordinario:string;
+  ciclo_parada:string;
+  sts:number;
+  prio:string;
+  tipo_activ:string;
+  motivo:string;
+}
+
+const ELEMENTOS: Dato[] =[
+{ unidad:'', responsable:'', tag:'', cat:'', frec_years:0, fecha_ultimo_tarado:'', year_ultimo_tarado:0, fecha_proximo_tarado_x_year:0, year_de_proximo_tarado_x_categoria:0, nueva:'', correct:'', plan_ordinario:'', ciclo_parada:'', sts:0, prio:'', tipo_activ:'', motivo:''}
+
+];
 
 const ELEMENT_DATA: Datos[] = [
   {position: 1, descripcion: 'Cuerpo'},
@@ -45,27 +72,74 @@ const ELEMENT_DATA: Datos[] = [
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit, AfterViewInit {
-
+ 
  //@ViewChild(MatSort) sort: MatSort;
  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
  @ViewChild(MatSort, {static: true}) sort: MatSort;
+ data: [][];
+tempo:any[]=[];
+obj: Dato;
  constructor() { }
 
  ngOnInit(): void {
  }
 
  ngAfterViewInit(): void {
-   this.dataSource.paginator = this.paginator;
-   this.dataSource.sort = this.sort;
+   this.dataSources.paginator = this.paginator;
+   this.dataSources.sort = this.sort;
+   this.dataSources.sort = this.sort;
  }
-
-
- displayedColumns: string[] = ['position', 'descripcion'];
- dataSource = new MatTableDataSource(ELEMENT_DATA);
 
  applyFilter(event: Event) {
    const filterValue = (event.target as HTMLInputElement).value;
-   this.dataSource.filter = filterValue.trim().toLowerCase();
+   this.dataSources.filter = filterValue.trim().toLowerCase();
  }
+
+ onFileChange(evt: any) {
+  const target : DataTransfer =  <DataTransfer>(evt.target);
+  
+  if (target.files.length !== 1) throw new Error('Cannot use multiple files');
+
+  const reader: FileReader = new FileReader();
+
+  reader.onload = (e: any) => {
+    const bstr: string = e.target.result;
+
+    const wb: XLSX.WorkBook = XLSX.read(bstr, { type: 'binary' });
+
+    const wsname : string = wb.SheetNames[1];
+
+    const ws: XLSX.WorkSheet = wb.Sheets[wsname];
+
+    console.log(ws);
+
+    this.data = (XLSX.utils.sheet_to_json(ws, { header: 2 }));
+ 
+    let x = this.data.slice(1);
+
+    let a:number =0;
+
+    for (let i = 0; i<this.data.length; i++) {
+      if (i>0) {
+    
+       this.tempo.push(this.data[i]);
+      }
+    }
+   
+   this.dataSources.data= this.tempo; 
+  };
+  
+  
+  reader.readAsBinaryString(target.files[0]);
+
+  
+
+}
+
+ displayedColumns: string[] = ['position', 'descripcion'];
+ displayedColumnas: string[] = ['unidad', 'responsable','tag','cat','frec_years','fecha_ultimo_tarado','year_ultimo_tarado','fecha_proximo_tarado_x_year','year_de_proximo_tarado_x_categoria','nueva','correct','plan_ordinario','ciclo_parada','sts','prio','tipo_activ','motivo'];
+ dataSources = new MatTableDataSource();
+
+
 
 }
