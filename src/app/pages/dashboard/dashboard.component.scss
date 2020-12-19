@@ -3,6 +3,60 @@
     padding: 0;
 }
 
+@mixin flexbox {
+    display:-webkit-flex; 
+    display: -ms-flexbox; 
+    display:flex; 
+}
+
+.dashboard-container{
+    @include flexbox;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: .8rem;
+   /*  margin-top: 1.5rem; */
+
+   &-tabla-uno{
+    @include flexbox;
+    width: 100%;
+    margin-bottom: 3rem;
+
+    .create-account-form{
+        width: 95%;
+        justify-content: center;
+        table{
+          width: 100%;
+          margin-bottom: 2rem;
+         
+          .mat-sort-header-container , th{
+            background: var(--color-secondary);
+            color: white; 
+           /*  text-transform: uppercase; */
+            font-size: .8rem;
+            justify-content: center !important;
+          }
+          
+          tr.mat-row{
+            td{
+              text-align: center;
+              font-size: .8rem;
+              color:#333;
+            }
+          
+          }
+      }
+
+      .fa-upload{
+          margin-left:1rem;
+      }
+    }
+
+    
+
+   }
+}
 
 /* @mixin flexbox {
     display:-webkit-flex; 
@@ -37,3 +91,33 @@
  
  
 } */
+
+
+::ng-deep .create-account-form {
+    .mat-focused .mat-form-field-ripple {
+      background-color: #e43a15 !important;
+    }
+    .mat-focused .mat-form-field-label {
+      color: #e43a15 !important;
+     }
+}  
+
+  .upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    margin-top:2rem;
+  }
+  
+  .upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }
+
+  button{
+    margin-right: 2rem;
+    width: 10rem;
+  }

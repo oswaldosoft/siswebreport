@@ -652,3 +652,16 @@ tr:hover{
   overflow: hidden !important;
   overflow-y: hidden !important;
 }
+
+
+
+::ng-deep .create-account-form {
+  .mat-focused .mat-form-field-ripple {
+    /*change color of underline when focused*/
+    background-color: #e43a15 !important;
+  }
+  .mat-focused .mat-form-field-label {
+    /*change color of label when focused*/
+    color: #e43a15 !important;
+   }
+}  

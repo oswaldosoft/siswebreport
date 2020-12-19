@@ -79,15 +79,18 @@ export class DashboardComponent implements OnInit, AfterViewInit {
  data: [][];
 tempo:any[]=[];
 obj: Dato;
- constructor() { }
+ constructor() { 
+ }
 
  ngOnInit(): void {
+  this.paginator._intl.itemsPerPageLabel = 'Por páginas';
  }
 
  ngAfterViewInit(): void {
    this.dataSources.paginator = this.paginator;
    this.dataSources.sort = this.sort;
    this.dataSources.sort = this.sort;
+
  }
 
  applyFilter(event: Event) {
