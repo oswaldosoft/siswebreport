@@ -17,6 +17,8 @@ export class HeaderRightComponent implements OnInit {
 
   salida():void{
     this.router.navigate(['login']);
+   localStorage.removeItem('data');
+
   }
   
   perfil():void{

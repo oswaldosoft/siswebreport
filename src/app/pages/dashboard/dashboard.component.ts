@@ -3,6 +3,14 @@ import {MatTableDataSource} from '@angular/material/table';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import * as XLSX from 'xlsx';
+//import { ChartType } from 'chart.js';
+import { MultiDataSet, Label, Color } from 'ng2-charts';
+
+
+import { ChartDataSets, ChartOptions, ChartType } from 'chart.js';
+
+import * as pluginDataLabels from 'chartjs-plugin-annotation';
+
 
 
 
@@ -12,27 +20,27 @@ export interface Datos {
 }
 
  interface Dato {
-  unidad:string;
-  responsable:string;
-  tag:string;
-  cat:string;
-  frec_years:number;
-  fecha_ultimo_tarado:string;
-  year_ultimo_tarado:number;
-  fecha_proximo_tarado_x_year:number;
-  year_de_proximo_tarado_x_categoria:number;
-  nueva:string;
-  correct:string;
-  plan_ordinario:string;
-  ciclo_parada:string;
-  sts:number;
-  prio:string;
-  tipo_activ:string;
-  motivo:string;
+  Unit:string;
+  Area:string;
+  TAG:string;
+  Cat:string;
+  Frec:number;
+  Ult_Tarado:string;
+  Ult_a_Tarado:number;
+  Prox_Tarado:number;
+  Prox_a_Tarado:number;
+  Nueva:string;
+  Correct:string;
+  Ordinario:string;
+  Parada:string;
+  STs:number;
+  Prio:string;
+  Tip_Activ:string;
+  Motivo:string;
 }
 
 const ELEMENTOS: Dato[] =[
-{ unidad:'', responsable:'', tag:'', cat:'', frec_years:0, fecha_ultimo_tarado:'', year_ultimo_tarado:0, fecha_proximo_tarado_x_year:0, year_de_proximo_tarado_x_categoria:0, nueva:'', correct:'', plan_ordinario:'', ciclo_parada:'', sts:0, prio:'', tipo_activ:'', motivo:''}
+{ Unit:'', Area:'', TAG:'', Cat:'', Frec:0, Ult_Tarado:'', Ult_a_Tarado:0, Prox_Tarado:0, Prox_a_Tarado:0, Nueva:'', Correct:'', Ordinario:'', Parada:'', STs:0, Prio:'', Tip_Activ:'', Motivo:''}
 
 ];
 
@@ -72,14 +80,50 @@ const ELEMENT_DATA: Datos[] = [
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit, AfterViewInit {
- 
+  public barChartOptions: ChartOptions = {
+    responsive: true,
+    // We use these empty structures as placeholders for dynamic theming.
+    scales: { xAxes: [{}], yAxes: [{}] },
+    plugins: {
+      datalabels: {
+        anchor: 'end',
+        align: 'end',
+      }
+    }
+  };
+  public barChartLabels: Label[] = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
+  public barChartType: ChartType = 'bar';
+  public barChartLegend = true;
+  public barChartPlugins = [pluginDataLabels];
+
+  public barChartData: ChartDataSets[] = [
+    { data: [65, 59, 80, 81, 56, 55, 40], label: 'Convencionales' },
+    { data: [28, 48, 40, 19, 86, 27, 90], label: 'Balanceadas' }
+  ];
+
+
  //@ViewChild(MatSort) sort: MatSort;
  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
  @ViewChild(MatSort, {static: true}) sort: MatSort;
  data: [][];
 tempo:any[]=[];
 obj: Dato;
+
+// Doughnut
+public doughnutChartLabels: Label[] = ['Válvulas convencionales', 'Válvulas balanceadas', 'Presión y vacio'];
+public doughnutChartData: MultiDataSet = [
+  [350, 450, 100],
+  [50, 150, 120],
+  [250, 130, 70],
+];
+public doughnutChartType: ChartType = 'doughnut';
+public colors:Color[] =[
+  {backgroundColor:['#9E120E','#FF5800','#FFB414']},
+  {backgroundColor:['#9E120E','#FF5800','#FFB414']},
+  {backgroundColor:['#9E120E','#FF5800','#FFB414']}
+];
  constructor() { 
+   
  }
 
  ngOnInit(): void {
@@ -90,6 +134,10 @@ obj: Dato;
    this.dataSources.paginator = this.paginator;
    this.dataSources.sort = this.sort;
    this.dataSources.sort = this.sort;
+
+   if(localStorage.getItem('data')){
+    this.dataSources.data = JSON.parse(localStorage.getItem('data'));
+   }
 
  }
 
@@ -121,15 +169,18 @@ obj: Dato;
     let x = this.data.slice(1);
 
     let a:number =0;
-
     for (let i = 0; i<this.data.length; i++) {
-      if (i>0) {
+      if (i>=0) {
     
        this.tempo.push(this.data[i]);
+      // localStorage.setItem('data',this.data[i]);
+      
       }
     }
+    localStorage.setItem('data',JSON.stringify(this.tempo));
+   //this.dataSources.data= this.tempo; 
+   this.dataSources.data = JSON.parse(localStorage.getItem('data'));
    
-   this.dataSources.data= this.tempo; 
   };
   
   
@@ -139,10 +190,31 @@ obj: Dato;
 
 }
 
- displayedColumns: string[] = ['position', 'descripcion'];
- displayedColumnas: string[] = ['unidad', 'responsable','tag','cat','frec_years','fecha_ultimo_tarado','year_ultimo_tarado','fecha_proximo_tarado_x_year','year_de_proximo_tarado_x_categoria','nueva','correct','plan_ordinario','ciclo_parada','sts','prio','tipo_activ','motivo'];
+ displayedColumns: string[] = ['Unit', 'descripcion'];
+ //displayedColumnas: string[] = ['unidad', 'responsable','tag','cat','Frec','Ult_Tarado','Ult_a_Tarado','Prox_Tarado','Prox_a_Tarado','Nueva','Correct','Ordinario','Parada','STs','Prio','Tip_Activ','Motivo'];
+ displayedColumnas: string[] = ['Unit', 'Area','TAG','Cat','Frec','Ult_Tarado','Ult_a_Tarado','Prox_Tarado','Prox_a_Tarado','Nueva','Correct','Ordinario','Parada','STs','Prio','Tip_Activ','Motivo'];
  dataSources = new MatTableDataSource();
 
+ // events
+ public chartClicked({ event, active }: { event: MouseEvent, active: {}[] }): void {
+  console.log(event, active);
+}
 
+public chartHovered({ event, active }: { event: MouseEvent, active: {}[] }): void {
+  console.log(event, active);
+}
+
+
+public randomize(): void {
+  // Only Change 3 values
+  this.barChartData[0].data = [
+    Math.round(Math.random() * 100),
+    59,
+    80,
+    (Math.random() * 100),
+    56,
+    (Math.random() * 100),
+    40 ];
+}
 
 }

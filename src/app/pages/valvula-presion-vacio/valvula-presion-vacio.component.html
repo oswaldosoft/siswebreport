@@ -1,47 +1,31 @@
-<h3 class="secciones">Válvulas Alivio Presión /Vacío</h3>
+ <p class="secciones">Válvulas Alivio Presión /Vacío</p>
 <div class="valvulas-container">
     <div class="seg-conv-container-img">
-        <img src="../../../assets/img/presion-vacio.png" class="">
+       <table  class="mat-elevation-z8">
+        <th>imagen de referencia</th>
+        <tr>
+          <td>
+           <img src="../../../assets/img/presion-muelle-vacio.png">
+          </td>
+        </tr>
+    </table>
     </div>
     <div class="seg-conv-container-tablero">
-        <table>
-            <thead>
-            <tr>
-                <th>Items</th>
-                <th>Descripción</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr><td>1</td><td>Cuerpo de la válvula</td></tr>
-            <tr><td>2</td><td>Caperuza protección</td></tr>
-            <tr><td>3</td><td>Tuercas Caperuza</td></tr>
-            <tr><td>4</td><td>Anillo espaciador</td></tr>
-            <tr><td>5</td><td>Paleta de presión</td></tr>
-            <tr><td>6</td><td>Vástago paleta de presión</td></tr>
-            <tr><td>7</td><td>Diafragma paleta de presión</td></tr>
-            <tr><td>8</td><td>Disco respaldo diafragma de presión</td></tr>
-            <tr><td>9</td><td>Postes guías paleta de presión</td></tr>
-            <tr><td>10</td><td>Disco de soporte de diafragma</td></tr>
-            <tr><td>11</td><td>Tapa lado vacío</td></tr>
-            <tr><td>12</td><td>Junta</td></tr>
-            <tr><td>13</td><td>Paleta lado vacío</td></tr>
-            <tr><td>14</td><td>Vástago paleta lado vacío</td></tr>
-            <tr><td>15</td><td>Diafragma paleta vacío</td></tr>
-            <tr><td>16</td><td>Disco respaldo diafragma vacío</td></tr>
-            <tr><td>17</td><td>Postes guías paleta lado vacío</td></tr>
-            <tr><td>18</td><td>Pantalla lado vacío</td></tr>
-            <tr><td>19</td><td>Anillo de retención de pantalla</td></tr>
-            <tr><td>20</td><td>Pantalla lado presión</td></tr>
-            <tr><td>21</td><td>Arandela de sellado</td></tr>
-            <tr><td>22</td><td>Disco espaciador</td></tr>
-            <tr><td>23</td><td>Arandela de sellado</td></tr>
-            <tr><td>24</td><td>Pesas paleta de presión</td></tr>
-            <tr><td>25</td><td>Pesas paleta vacío</td></tr>
-            
-            </tbody>
+        <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+            <!-- Position Column -->
+            <ng-container matColumnDef="position">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Items. </th>
+              <td class="tde" mat-cell *matCellDef="let element"> {{element.position}} </td>
+            </ng-container>
+          
+            <!-- Name Column -->
+            <ng-container matColumnDef="descripcion">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Descripción </th>
+              <td class="tde" mat-cell *matCellDef="let element"> {{element.descripcion}} </td>
+            </ng-container>
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
         </table>
-
     </div>
-
 </div>
-

@@ -17,6 +17,12 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "rxjs-compat",
+              "chart.js",
+              "chartjs-plugin-annotation",
+              "xlsx"
+           ],
             "outputPath": "dist/siswebreport",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -124,6 +130,10 @@
               "devServerTarget": "siswebreport:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }

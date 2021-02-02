@@ -1,1 +1,46 @@
-<p>usuario works!</p>
+<div class="datos-tenicos-container">
+    <mat-tab-group>
+       <mat-tab label="I. INFORMACIÓN USUARIO"> 
+           <mat-card>
+               <mat-card-content>
+                 <form class="create-account-form"  autocomplete="off">
+                  <mat-form-field>
+                   <mat-label>Nombres usuario</mat-label>
+                     <input matInput type="text"  placeholder="Indique información" id="nombre_usuario" autocomplete="off">
+                  </mat-form-field>
+   
+                  <mat-form-field>
+                  <mat-label>Apellidos usuario</mat-label>
+                     <input matInput type="text"  placeholder="Indique información" id="apellido_usuario" autocomplete="off">
+                  </mat-form-field>
+   
+                  <mat-form-field>
+                  <mat-label>Estatus</mat-label>
+                      <input matInput type="text"  placeholder="Indique información" id="estatus" autocomplete="off">
+                   </mat-form-field>
+   
+                  <mat-form-field>
+                  <mat-label>Rol usuario</mat-label>
+                     <input matInput type="text"  placeholder="Indique información" id="rol_usuario" autocomplete="off">
+                  </mat-form-field>
+   
+                  <mat-form-field>
+                  <mat-label>Fecha registro usuario</mat-label>
+                     <input matInput type="text"  placeholder="Indique información" id="fech_reg_usuario" autocomplete="off">
+                  </mat-form-field>
+
+                  <mat-form-field>
+                    <mat-label>Fecha último acceso</mat-label>
+                       <input matInput type="text"  placeholder="Indique información" id="fech_ult_acceso" autocomplete="off">
+                    </mat-form-field>
+   
+                     <div class="botones">
+                       <button mat-raised-button type="submit" color="warn">Actualizar</button>
+                       <button mat-stroked-button  type="reset">Cancelar</button> 
+                   </div>    
+               </form>
+               </mat-card-content>
+             </mat-card>
+   </mat-tab>
+  </mat-tab-group>
+ </div>

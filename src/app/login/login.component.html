@@ -27,7 +27,7 @@
           <div class="container-error-message" *ngIf="email.errors.minlength">
             El correo electrónico debe tener al menos 5 caracteres.
           </div>
-          <div class="container-error-message"
+          <div class="container-error-message" 
             *ngIf="(email.dirty || email.touched) && email.invalid && email.errors.pattern">
             El valor debe ser una dirección de correo electrónico válida
           </div>

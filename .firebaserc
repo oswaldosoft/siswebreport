@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "portalweb-31fe7": {
+      "hosting": {
+        "siswebreport": [
+          "portalweb-31fe7"
+        ]
+      }
+    }
+  }
+}
